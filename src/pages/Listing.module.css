@@ -3,7 +3,7 @@
   padding-bottom: 40px;
 }
 
-/* ===== HEADER ===== */
+/* header */
 
 .headerCard {
   background: var(--bg-card);
@@ -29,7 +29,7 @@
   max-width: 560px;
 }
 
-/* ===== SEARCH + FILTERS ===== */
+/* search + filters */
 
 .controls {
   margin-top: 32px;
@@ -73,7 +73,7 @@
   margin-top: 16px;
 }
 
-/* ===== GRID ===== */
+/* grid */
 
 .gridLabel {
   margin-top: 40px;
@@ -86,7 +86,7 @@
   margin-top: 16px;
 }
 
-/* ===== SPECIES CARD ===== */
+/* species card */
 
 .speciesCard {
   background: var(--bg-card);
@@ -138,7 +138,7 @@
   margin-top: 2px;
 }
 
-/* ===== ECOSYSTEM CARD ===== */
+/* ecosystem card */
 
 .ecoCard {
   background: var(--bg-card);
@@ -193,7 +193,7 @@
   margin-top: 6px;
 }
 
-/* ===== RESPONSIVO ===== */
+/* responsivo */
 
 @media (max-width: 1024px) {
   .grid {

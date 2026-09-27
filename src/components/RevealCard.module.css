@@ -11,7 +11,7 @@
   transform: translateY(-4px);
 }
 
-/* ===== IMAGE AREA ===== */
+/* image area */
 
 .imageArea {
   position: relative;
@@ -74,7 +74,7 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
-/* ===== SCROLL REVEAL (mobile + desktop) ===== */
+/* scroll reveal (mobile + desktop) */
 
 .card.visible .emoji {
   opacity: 0.35;
@@ -91,7 +91,7 @@
   to { background-position: 0 100%; }
 }
 
-/* ===== HOVER REVEAL (desktop) ===== */
+/* hover reveal (desktop) */
 
 .card:hover .emoji {
   filter: brightness(1) saturate(1);
@@ -117,7 +117,7 @@
   );
 }
 
-/* ===== INFO ===== */
+/* info */
 
 .info {
   padding: 16px;
@@ -147,7 +147,7 @@
   margin-top: 2px;
 }
 
-/* ===== RESPONSIVO ===== */
+/* responsivo */
 
 @media (max-width: 768px) {
   .emoji {

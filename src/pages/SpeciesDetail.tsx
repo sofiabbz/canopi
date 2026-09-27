@@ -70,7 +70,7 @@ export default function SpeciesDetail() {
       ]} />
 
       <div className="container">
-        {/* ===== HERO ===== */}
+        {/* hero */}
         <div className={styles.heroCard}>
           <div className={styles.heroText}>
             <p className="eyebrow">{typeLabel} DA {biome.name.toUpperCase()}</p>
@@ -88,7 +88,7 @@ export default function SpeciesDetail() {
           </div>
         </div>
 
-        {/* ===== STATUS DE CONSERVAÇÃO ===== */}
+        {/* status de conserva��o */}
         <Section className={styles.statusSection}>
           <p className={`eyebrow ${styles.centered}`}>STATUS DE CONSERVAÇÃO</p>
           <div className={styles.statusBar}>
@@ -115,7 +115,7 @@ export default function SpeciesDetail() {
           </p>
         </Section>
 
-        {/* ===== INFORMAÇÕES ===== */}
+        {/* informa��es */}
         <Section className={styles.infoSection}>
           <p className={`eyebrow ${styles.centered}`}>
             INFORMAÇÕES DA ESPÉCIE
@@ -130,14 +130,14 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* ===== SOBRE ===== */}
+        {/* sobre */}
         <Section className={styles.aboutSection}>
           <p className={`eyebrow ${styles.centered}`}>SOBRE A ESPÉCIE</p>
           <h2 className={styles.aboutTitle}>Conheça {species.name.toLowerCase()}</h2>
           <p className={styles.aboutText}>{species.description}</p>
         </Section>
 
-        {/* ===== IMPORTÂNCIA ECOLÓGICA ===== */}
+        {/* import�ncia ecol�gica */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
@@ -155,7 +155,7 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* ===== VOCÊ SABIA? ===== */}
+        {/* voc� sabia? */}
         <Section className={styles.funFactsSection}>
           <p className={`eyebrow ${styles.centered}`}>VOCÊ SABIA?</p>
           <h2 className={styles.funFactsTitle}>Curiosidades sobre a espécie</h2>
@@ -172,7 +172,7 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* ===== ESPÉCIES RELACIONADAS ===== */}
+        {/* esp�cies relacionadas */}
         {related.length > 0 && (
           <Section className={styles.relatedSection}>
             <p className={`eyebrow ${styles.centered}`}>CONTINUE EXPLORANDO</p>
@@ -198,7 +198,7 @@ export default function SpeciesDetail() {
           </Section>
         )}
 
-        {/* ===== NAVEGAÇÃO ===== */}
+        {/* navega��o */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/${sectionRoute}`} className="btn-outline">
             ← Voltar para {sectionLabel}

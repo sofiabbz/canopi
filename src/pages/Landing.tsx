@@ -50,7 +50,7 @@ const features = [
 export default function Landing() {
   return (
     <div className={styles.landing}>
-      {/* ===== HERO ===== */}
+      {/* hero */}
       <section className={styles.heroSection}>
         <div className="container">
           <div className={styles.heroCard}>
@@ -76,7 +76,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ===== STATS ===== */}
+      {/* stats */}
       <Reveal>
         <section className={styles.statsSection}>
           <div className="container">
@@ -92,7 +92,7 @@ export default function Landing() {
         </section>
       </Reveal>
 
-      {/* ===== BIOMAS ===== */}
+      {/* biomas */}
       <Reveal>
         <section className={styles.biomesSection}>
           <div className="container">
@@ -130,7 +130,7 @@ export default function Landing() {
         </section>
       </Reveal>
 
-      {/* ===== MAPA INTERATIVO ===== */}
+      {/* mapa interativo */}
       <Reveal>
         <section className={styles.mapSection}>
           <div className="container">
@@ -176,7 +176,7 @@ export default function Landing() {
         </section>
       </Reveal>
 
-      {/* ===== FUNCIONALIDADES ===== */}
+      {/* funcionalidades */}
       <Reveal>
         <section className={styles.featuresSection}>
           <div className="container">
@@ -199,7 +199,7 @@ export default function Landing() {
         </section>
       </Reveal>
 
-      {/* ===== SOBRE ===== */}
+      {/* sobre */}
       <Reveal>
         <section className={styles.aboutSection}>
           <div className="container">

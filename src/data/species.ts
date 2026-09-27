@@ -17,7 +17,7 @@ export interface Species {
 }
 
 export const species: Species[] = [
-  // ===== AMAZÔNIA — FAUNA =====
+  // amaz�nia — fauna
   { id: 'onca-pintada', biome: 'amazonia', type: 'fauna', name: 'Onça-pintada', scientific: 'Panthera onca', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐆', image: '/images/fauna/onca-pintada.png', heroImage: '/images/fauna/onca-pintada-hero.png', detailImage: '/images/fauna/onca-pintada-detail.png',
     description: 'O maior felino das Américas e predador de topo da cadeia alimentar na Amazônia. É um símbolo da fauna brasileira e essencial para o equilíbrio ecológico.',
     traits: [{ label: 'Peso', value: 'até 135 kg' }, { label: 'Dieta', value: 'Carnívoro' }, { label: 'Habitat', value: 'Florestas densas' }, { label: 'Distribuição', value: 'América Central e do Sul' }],
@@ -58,7 +58,7 @@ export const species: Species[] = [
       { title: 'Voo silencioso', description: 'Apesar do grande porte, suas penas especializadas permitem voo quase silencioso entre as árvores, surpreendendo as presas no dossel.' },
     ] },
 
-  // ===== AMAZÔNIA — FLORA =====
+  // amaz�nia — flora
   { id: 'castanheira', biome: 'amazonia', type: 'flora', name: 'Castanheira', scientific: 'Bertholletia excelsa', category: 'Árvore', status: 'Vulnerável', emoji: '🌳', image: '/images/flora/castanheira.png', heroImage: '/images/flora/castanheira-hero.png', detailImage: '/images/flora/castanheira-detail.png',
     description: 'Uma das maiores árvores da Amazônia, podendo atingir 50 metros. Produz a castanha-do-pará, essencial para a economia extrativista da região.',
     traits: [{ label: 'Altura', value: 'até 50 m' }, { label: 'Fruto', value: 'Castanha-do-pará' }, { label: 'Uso', value: 'Alimentício' }, { label: 'Distribuição', value: 'Amazônia' }],
@@ -99,7 +99,7 @@ export const species: Species[] = [
       { title: 'Látex como defesa', description: 'O látex é na verdade uma defesa da árvore contra insetos e patógenos — ao ser cortada, a seiva leitosa veda a ferida e impede infecções.' },
     ] },
 
-  // ===== CERRADO — FAUNA =====
+  // cerrado — fauna
   { id: 'lobo-guara', biome: 'cerrado', type: 'fauna', name: 'Lobo-guará', scientific: 'Chrysocyon brachyurus', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐺', image: '/images/fauna/lobo-guara.png', heroImage: '/images/fauna/lobo-guara-hero.png', detailImage: '/images/fauna/lobo-guara-detail.png',
     description: 'O maior canídeo da América do Sul, com pernas longas adaptadas para caminhar pela vegetação alta do Cerrado. Alimenta-se de frutos e pequenos animais.',
     traits: [{ label: 'Altura', value: 'até 90 cm' }, { label: 'Dieta', value: 'Onívoro' }, { label: 'Habitat', value: 'Campos e cerrado' }, { label: 'Distribuição', value: 'Brasil central e países vizinhos' }],
@@ -140,7 +140,7 @@ export const species: Species[] = [
       { title: 'Cauda-cobertor', description: 'Sua enorme cauda felpuda serve como cobertor durante o sono, protegendo o corpo do frio e de insetos, além de ajudar na camuflagem em meio à vegetação.' },
     ] },
 
-  // ===== CERRADO — FLORA =====
+  // cerrado — flora
   { id: 'ipê-amarelo', biome: 'cerrado', type: 'flora', name: 'Ipê-amarelo', scientific: 'Handroanthus albus', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌼', image: '/images/flora/ipe-amarelo.png',
     description: 'Árvore-símbolo do Brasil, cujas flores amarelas cobrem completamente a copa durante o inverno, antes das novas folhas surgirem.',
     traits: [{ label: 'Altura', value: '6–14 m' }, { label: 'Floração', value: 'Jun–Set' }, { label: 'Uso', value: 'Ornamental' }, { label: 'Distribuição', value: 'Cerrado e Mata Atlântica' }],
@@ -181,7 +181,7 @@ export const species: Species[] = [
       { title: 'Resistente ao fogo', description: 'Como muitas plantas do Cerrado, o barbatimão possui casca espessa e raízes profundas que permitem rebrotar rapidamente após queimadas.' },
     ] },
 
-  // ===== MATA ATLÂNTICA — FAUNA =====
+  // mata atl�ntica — fauna
   { id: 'mico-leao-dourado', biome: 'mata-atlantica', type: 'fauna', name: 'Mico-leão-dourado', scientific: 'Leontopithecus rosalia', category: 'Mamífero', status: 'Em perigo', emoji: '🐒',
     description: 'Primata endêmico da Mata Atlântica fluminense, símbolo da conservação no Brasil. Quase foi extinto nos anos 1970, com menos de 200 indivíduos restantes.',
     traits: [{ label: 'Peso', value: '500–700 g' }, { label: 'Dieta', value: 'Onívoro' }, { label: 'Habitat', value: 'Floresta de baixada' }, { label: 'Distribuição', value: 'Rio de Janeiro' }],
@@ -222,7 +222,7 @@ export const species: Species[] = [
       { title: 'Solitária por natureza', description: 'Cada jaguatirica mantém um território de até 15 km² que patrulha solitariamente, marcando-o com urina e arranhões em árvores.' },
     ] },
 
-  // ===== MATA ATLÂNTICA — FLORA =====
+  // mata atl�ntica — flora
   { id: 'pau-brasil', biome: 'mata-atlantica', type: 'flora', name: 'Pau-brasil', scientific: 'Paubrasilia echinata', category: 'Árvore', status: 'Em perigo', emoji: '🪵',
     description: 'A árvore que deu nome ao país. Sua madeira vermelha era explorada desde a colonização e hoje é protegida por lei.',
     traits: [{ label: 'Altura', value: 'até 15 m' }, { label: 'Uso', value: 'Histórico/madeira' }, { label: 'Floração', value: 'Set–Out' }, { label: 'Distribuição', value: 'Mata Atlântica costeira' }],
@@ -263,7 +263,7 @@ export const species: Species[] = [
       { title: 'Floração sincronizada', description: 'Assim como o ipê-amarelo, o ipê-roxo perde todas as folhas antes de florescer, criando um espetáculo de cores que transforma paisagens urbanas e rurais por poucos dias.' },
     ] },
 
-  // ===== CAATINGA — FAUNA =====
+  // caatinga — fauna
   { id: 'ararinha-azul', biome: 'caatinga', type: 'fauna', name: 'Ararinha-azul', scientific: 'Cyanopsitta spixii', category: 'Ave', status: 'Extinta na natureza', emoji: '🦜',
     description: 'Ave endêmica da Caatinga baiana, declarada extinta na natureza em 2000. Programas de reintrodução tentam trazê-la de volta ao habitat original.',
     traits: [{ label: 'Tamanho', value: '55 cm' }, { label: 'Dieta', value: 'Frugívoro' }, { label: 'Habitat', value: 'Caatinga arbórea' }, { label: 'Distribuição', value: 'Norte da Bahia (histórica)' }],
@@ -304,7 +304,7 @@ export const species: Species[] = [
       { title: 'Sobrevive sem beber água', description: 'O mocó obtém toda a água necessária das folhas e cascas que consome, sendo capaz de sobreviver longos períodos sem acesso direto à água — adaptação vital na Caatinga.' },
     ] },
 
-  // ===== CAATINGA — FLORA =====
+  // caatinga — flora
   { id: 'mandacaru', biome: 'caatinga', type: 'flora', name: 'Mandacaru', scientific: 'Cereus jamacaru', category: 'Cactácea', status: 'Pouco preocupante', emoji: '🌵',
     description: 'O cacto-símbolo da Caatinga, que pode atingir 6 metros de altura. Armazena água em seu caule e serve de alimento para animais na seca.',
     traits: [{ label: 'Altura', value: 'até 6 m' }, { label: 'Flor', value: 'Branca (noturna)' }, { label: 'Uso', value: 'Alimentação animal' }, { label: 'Distribuição', value: 'Semiárido nordestino' }],
@@ -345,7 +345,7 @@ export const species: Species[] = [
       { title: 'Chá medicinal', description: 'Na medicina popular nordestina, o chá da casca da catingueira é utilizado para tratar inflamações, gripes e problemas digestivos, com eficácia reconhecida por comunidades há gerações.' },
     ] },
 
-  // ===== PAMPA — FAUNA =====
+  // pampa — fauna
   { id: 'veado-campeiro', biome: 'pampa', type: 'fauna', name: 'Veado-campeiro', scientific: 'Ozotoceros bezoarticus', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🦌',
     description: 'O único cervídeo que vive exclusivamente em campos abertos no Brasil. Sua população diminuiu drasticamente com a conversão dos campos nativos.',
     traits: [{ label: 'Peso', value: '30–40 kg' }, { label: 'Dieta', value: 'Herbívoro' }, { label: 'Habitat', value: 'Campos nativos' }, { label: 'Distribuição', value: 'Sul e Centro-Oeste do Brasil' }],
@@ -386,7 +386,7 @@ export const species: Species[] = [
       { title: 'Ninho no chão', description: 'O quero-quero faz ninhos simples diretamente no solo, em campos abertos. Os filhotes são precoces — saem andando e se alimentando sozinhos poucas horas após nascerem.' },
     ] },
 
-  // ===== PAMPA — FLORA =====
+  // pampa — flora
   { id: 'capim-barba-de-bode', biome: 'pampa', type: 'flora', name: 'Capim-barba-de-bode', scientific: 'Aristida jubata', category: 'Gramínea', status: 'Pouco preocupante', emoji: '🌾',
     description: 'Gramínea nativa que forma extensos tufos nos campos do Pampa. É indicadora de campos bem conservados.',
     traits: [{ label: 'Altura', value: '30–60 cm' }, { label: 'Habitat', value: 'Campos secos' }, { label: 'Tipo', value: 'Perene' }, { label: 'Importância', value: 'Indicadora ecológica' }],
@@ -427,7 +427,7 @@ export const species: Species[] = [
       { title: 'Resistente e pioneira', description: 'A marcela é uma das primeiras plantas a colonizar terrenos abandonados e beiras de estrada, preparando o solo para espécies mais exigentes — uma verdadeira pioneira ecológica.' },
     ] },
 
-  // ===== PANTANAL — FAUNA =====
+  // pantanal — fauna
   { id: 'tuiuiu', biome: 'pantanal', type: 'fauna', name: 'Tuiuiú', scientific: 'Jabiru mycteria', category: 'Ave', status: 'Pouco preocupante', emoji: '🦩',
     description: 'Ave-símbolo do Pantanal, é uma das maiores aves do Brasil com envergadura de até 2,8 metros. Constrói enormes ninhos em árvores.',
     traits: [{ label: 'Envergadura', value: 'até 2,8 m' }, { label: 'Dieta', value: 'Peixes' }, { label: 'Habitat', value: 'Áreas alagadas' }, { label: 'Distribuição', value: 'Pantanal e América Latina' }],
@@ -468,7 +468,7 @@ export const species: Species[] = [
       { title: 'Vida social intensa', description: 'As capivaras vivem em grupos hierarquizados de até 20 indivíduos, com um macho dominante. São altamente sociais e frequentemente vistas junto a aves que removem parasitas de sua pele.' },
     ] },
 
-  // ===== PANTANAL — FLORA =====
+  // pantanal — flora
   { id: 'piuva', biome: 'pantanal', type: 'flora', name: 'Piúva', scientific: 'Handroanthus impetiginosus', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌸',
     description: 'Ipê-rosa do Pantanal que transforma a paisagem com floração exuberante entre julho e setembro.',
     traits: [{ label: 'Altura', value: '10–20 m' }, { label: 'Floração', value: 'Jul–Set' }, { label: 'Uso', value: 'Ornamental' }, { label: 'Distribuição', value: 'Pantanal e Cerrado' }],

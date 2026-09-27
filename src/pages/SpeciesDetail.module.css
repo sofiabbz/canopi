@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-/* ===== SCROLL REVEAL ===== */
+/* scroll reveal */
 
 .reveal {
   opacity: 0;
@@ -20,7 +20,7 @@
   transform: translateY(0);
 }
 
-/* ===== HERO CARD ===== */
+/* hero card */
 
 .heroCard {
   background: var(--bg-card);
@@ -100,7 +100,7 @@
   font-size: 80px;
 }
 
-/* ===== STATUS DE CONSERVAÇÃO ===== */
+/* status de conserva��o */
 
 .statusSection {
   margin-top: 48px;
@@ -154,7 +154,7 @@
   letter-spacing: 0.02em;
 }
 
-/* ===== INFORMAÇÕES ===== */
+/* informa��es */
 
 .infoSection {
   margin-top: 48px;
@@ -191,7 +191,7 @@
   line-height: 1.5;
 }
 
-/* ===== SOBRE A ESPÉCIE ===== */
+/* sobre a esp�cie */
 
 .aboutSection {
   margin-top: 56px;
@@ -216,7 +216,7 @@
   margin-right: auto;
 }
 
-/* ===== IMPORTÂNCIA ECOLÓGICA ===== */
+/* import�ncia ecol�gica */
 
 .importanceCard {
   display: grid;
@@ -272,7 +272,7 @@
   margin-top: 12px;
 }
 
-/* ===== VOCÊ SABIA? ===== */
+/* curiosidades */
 
 .funFactsSection {
   margin-top: 56px;
@@ -324,7 +324,7 @@
   margin-top: 8px;
 }
 
-/* ===== ESPÉCIES RELACIONADAS ===== */
+/* esp�cies relacionadas */
 
 .relatedSection {
   margin-top: 56px;
@@ -416,7 +416,7 @@
   margin-top: 2px;
 }
 
-/* ===== NAVEGAÇÃO ===== */
+/* navega��o */
 
 .backSection {
   margin-top: 48px;
@@ -424,7 +424,7 @@
   justify-content: center;
 }
 
-/* ===== RESPONSIVO ===== */
+/* responsivo */
 
 @media (max-width: 1024px) {
   .infoGrid {

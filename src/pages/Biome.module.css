@@ -5,7 +5,7 @@
   padding-bottom: 40px;
 }
 
-/* ===== HERO ===== */
+/* hero */
 
 .heroCard {
   display: grid;
@@ -55,7 +55,7 @@
   font-size: 48px;
 }
 
-/* ===== STATS ===== */
+/* stats */
 
 .statsGrid {
   display: grid;
@@ -84,7 +84,7 @@
   margin-top: 4px;
 }
 
-/* ===== BIODIVERSIDADE ===== */
+/* biodiversidade */
 
 .bioSection {
   margin-top: var(--gap-sections);
@@ -162,7 +162,7 @@
   flex-wrap: wrap;
 }
 
-/* ===== RESPONSIVO ===== */
+/* responsivo */
 
 @media (max-width: 1024px) {
   .heroCard {

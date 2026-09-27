@@ -46,7 +46,7 @@ export default function EcosystemDetail() {
       ]} />
 
       <div className="container">
-        {/* ===== HERO ===== */}
+        {/* hero */}
         <div className={styles.hero}>
           <div className={styles.heroText}>
             <p className="eyebrow">ECOSSISTEMA {biome.name === 'Mata Atl√¢ntica' ? 'DA' : 'DO'} {biome.name.toUpperCase()}</p>
@@ -64,7 +64,7 @@ export default function EcosystemDetail() {
           </div>
         </div>
 
-        {/* ===== INFORMA√á√ïES ===== */}
+        {/* informa„á„ïes */}
         <Section className={styles.infoSection}>
           <p className="eyebrow" style={{ textAlign: 'center' }}>INFORMA√á√ïES DO ECOSSISTEMA</p>
           <div className={styles.infoGrid}>
@@ -77,14 +77,14 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* ===== SOBRE ===== */}
+        {/* sobre */}
         <Section className={styles.aboutSection}>
           <p className="eyebrow">SOBRE O ECOSSISTEMA</p>
           <h2 className={styles.aboutTitle}>Conhe√ßa {ecosystem.name.toLowerCase().match(/^[aeiou]/) ? 'o' : 'a'} {ecosystem.name.toLowerCase()}</h2>
           <p className={styles.aboutText}>{ecosystem.about}</p>
         </Section>
 
-        {/* ===== IMPORT√ÇNCIA ECOL√ìGICA ===== */}
+        {/* import„Çncia ecol„ìgica */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
@@ -102,7 +102,7 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* ===== VOC√ä SABIA? ===== */}
+        {/* voc„ä sabia? */}
         <Section className={styles.factsSection}>
           <p className="eyebrow">VOC√ä SABIA?</p>
           <h2 className={styles.factsTitle}>Curiosidades sobre o ecossistema</h2>
@@ -117,7 +117,7 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* ===== ECOSSISTEMAS RELACIONADOS ===== */}
+        {/* ecossistemas relacionados */}
         {related.length > 0 && (
           <Section className={styles.relatedSection}>
             <p className="eyebrow" style={{ textAlign: 'center' }}>CONTINUE EXPLORANDO</p>
@@ -142,7 +142,7 @@ export default function EcosystemDetail() {
           </Section>
         )}
 
-        {/* ===== NAVEGA√á√ÉO ===== */}
+        {/* navega„á„Éo */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/ecossistemas`} className="btn-outline">
             ‚Üê Voltar para Ecossistemas

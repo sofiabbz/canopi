@@ -16,7 +16,7 @@ export interface Ecosystem {
 }
 
 export const ecosystems: Ecosystem[] = [
-  // ===== AMAZÔNIA =====
+  // amaz�nia
   { id: 'terra-firme', biome: 'amazonia', name: 'Terra firme', category: 'Terra firme', emoji: '🌳', image: '/images/ecosystems/terra-firme.png', heroImage: '/images/ecosystems/terra-firme-hero.png', detailImage: '/images/ecosystems/terra-firme-detail.png',
     description: 'Áreas que não sofrem alagamentos periódicos, com grande diversidade de árvores e animais.',
     subtitle: 'Floresta não alagável',
@@ -86,7 +86,7 @@ export const ecosystems: Ecosystem[] = [
     ],
   },
 
-  // ===== CERRADO =====
+  // cerrado
   { id: 'cerradao', biome: 'cerrado', name: 'Cerradão', category: 'Cerradão', emoji: '🌲',
     description: 'Formação florestal densa do Cerrado, com dossel fechado e árvores de até 15 metros.',
     subtitle: 'Floresta densa do Cerrado',
@@ -156,7 +156,7 @@ export const ecosystems: Ecosystem[] = [
     ],
   },
 
-  // ===== MATA ATLÂNTICA =====
+  // mata atl�ntica
   { id: 'floresta-ombrofila', biome: 'mata-atlantica', name: 'Floresta ombrófila', category: 'Floresta ombrófila', emoji: '🌳',
     description: 'Floresta densa e úmida que recebe chuvas abundantes o ano todo, com alta biodiversidade.',
     subtitle: 'Floresta densa e úmida',
@@ -226,7 +226,7 @@ export const ecosystems: Ecosystem[] = [
     ],
   },
 
-  // ===== CAATINGA =====
+  // caatinga
   { id: 'caatinga-arborea', biome: 'caatinga', name: 'Caatinga arbórea', category: 'Caatinga arbórea', emoji: '🌵',
     description: 'Formação mais alta da Caatinga, com árvores de até 15 metros que perdem folhas na seca.',
     subtitle: 'Floresta seca de porte alto',
@@ -296,7 +296,7 @@ export const ecosystems: Ecosystem[] = [
     ],
   },
 
-  // ===== PAMPA =====
+  // pampa
   { id: 'campos-nativos', biome: 'pampa', name: 'Campos nativos', category: 'Campos nativos', emoji: '🌾',
     description: 'Extensas áreas de gramíneas nativas que formam a paisagem típica do Pampa gaúcho.',
     subtitle: 'Pastagens naturais do sul',
@@ -349,7 +349,7 @@ export const ecosystems: Ecosystem[] = [
     ],
   },
 
-  // ===== PANTANAL =====
+  // pantanal
   { id: 'campos-inundaveis', biome: 'pantanal', name: 'Campos inundáveis', category: 'Campos inundáveis', emoji: '🌊',
     description: 'Extensas planícies que alagam durante as cheias, formando pastagens naturais para a fauna.',
     subtitle: 'Planície de inundação sazonal',
