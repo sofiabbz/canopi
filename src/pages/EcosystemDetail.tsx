@@ -55,7 +55,13 @@ export default function EcosystemDetail() {
             <span className={styles.categoryBadge}>{ecosystem.category}</span>
             <p className={styles.heroDesc}>{ecosystem.description}</p>
           </div>
-          <div className={styles.heroImage}>{ecosystem.emoji}</div>
+          <div className={styles.heroImage}>
+            {ecosystem.heroImage ? (
+              <img src={ecosystem.heroImage} alt={ecosystem.name} className={styles.heroPhoto} />
+            ) : (
+              ecosystem.emoji
+            )}
+          </div>
         </div>
 
         {/* ===== INFORMAÇÕES ===== */}
@@ -81,7 +87,13 @@ export default function EcosystemDetail() {
         {/* ===== IMPORTÂNCIA ECOLÓGICA ===== */}
         <Section>
           <div className={styles.importanceCard}>
-            <div className={styles.importanceImage}>{ecosystem.emoji}</div>
+            <div className={styles.importanceImage}>
+              {ecosystem.detailImage ? (
+                <img src={ecosystem.detailImage} alt={ecosystem.name} className={styles.importancePhoto} />
+              ) : (
+                ecosystem.emoji
+              )}
+            </div>
             <div className={styles.importanceText}>
               <p className="eyebrow">IMPORTÂNCIA ECOLÓGICA</p>
               <h2 className={styles.importanceTitle}>{ecosystem.importance.title}</h2>

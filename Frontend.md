@@ -205,7 +205,7 @@ Relatório Completo do Frontend — Canopi
 
   Método toLowerCase().includes(): Converte ambas as strings para minúsculas antes de verificar se a string de busca está contida no nome, garantindo busca sem distinção de maiúsculas/minúsculas.
 
-  7.5 Ecosystems
+  7.5 Ecosystems **(CORRIGIR!!!!!!!!!!!!!!!!!!)**
 
   Mesma estrutura de Fauna/Flora, mas os cards são <div> (não <Link>) pois não há página de detalhe para ecossistemas. A busca filtra por nome e descrição.
 

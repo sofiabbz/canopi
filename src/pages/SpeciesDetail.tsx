@@ -80,7 +80,11 @@ export default function SpeciesDetail() {
             <p className={styles.heroDesc}>{species.description}</p>
           </div>
           <div className={styles.heroImage}>
-            <span className={styles.heroEmoji}>{species.emoji}</span>
+            {species.heroImage ? (
+              <img src={species.heroImage} alt={species.name} className={styles.heroPhoto} />
+            ) : (
+              <span className={styles.heroEmoji}>{species.emoji}</span>
+            )}
           </div>
         </div>
 
@@ -137,7 +141,11 @@ export default function SpeciesDetail() {
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
-              <span className={styles.importanceEmoji}>{species.emoji}</span>
+              {species.detailImage ? (
+                <img src={species.detailImage} alt={species.name} className={styles.importancePhoto} />
+              ) : (
+                <span className={styles.importanceEmoji}>{species.emoji}</span>
+              )}
             </div>
             <div className={styles.importanceText}>
               <p className="eyebrow">IMPORTÂNCIA ECOLÓGICA</p>

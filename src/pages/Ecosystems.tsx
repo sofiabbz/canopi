@@ -68,7 +68,13 @@ export default function Ecosystems() {
         <div className={styles.grid}>
           {filtered.map((eco) => (
             <Link key={eco.id} to={`/${biome.slug}/ecossistemas/${eco.id}`} className={styles.ecoCard}>
-              <div className={styles.ecoImage}>{eco.emoji}</div>
+              <div className={styles.ecoImage}>
+                {eco.image ? (
+                  <img src={eco.image} alt={eco.name} className={styles.ecoPhoto} />
+                ) : (
+                  eco.emoji
+                )}
+              </div>
               <div className={styles.ecoInfo}>
                 <h3 className={styles.ecoName}>{eco.name}</h3>
                 <p className={styles.ecoDesc}>{eco.description}</p>

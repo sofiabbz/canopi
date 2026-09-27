@@ -5,12 +5,13 @@ import styles from './RevealCard.module.css';
 interface RevealCardProps {
   to: string;
   emoji: string;
+  image?: string;
   category: string;
   name: string;
   scientific: string;
 }
 
-export default function RevealCard({ to, emoji, category, name, scientific }: RevealCardProps) {
+export default function RevealCard({ to, emoji, image, category, name, scientific }: RevealCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -39,9 +40,13 @@ export default function RevealCard({ to, emoji, category, name, scientific }: Re
       className={`${styles.card} ${visible ? styles.visible : ''}`}
     >
       <div className={styles.imageArea}>
-        <span className={styles.emoji}>{emoji}</span>
-        <div className={styles.scanline} />
-        <div className={styles.revealLabel}>Descobrir</div>
+        {image ? (
+          <img src={image} alt={name} className={styles.photo} />
+        ) : (
+          <span className={styles.emoji}>{emoji}</span>
+        )}
+        {!image && <div className={styles.scanline} />}
+        {!image && <div className={styles.revealLabel}>Descobrir</div>}
       </div>
       <div className={styles.info}>
         <p className={styles.category}>{category}</p>

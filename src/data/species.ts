@@ -9,13 +9,16 @@ export interface Species {
   description: string;
   traits: { label: string; value: string }[];
   emoji: string;
+  image?: string;
+  heroImage?: string;
+  detailImage?: string;
   importance: { title: string; description: string };
   funFacts: { title: string; description: string }[];
 }
 
 export const species: Species[] = [
   // ===== AMAZÔNIA — FAUNA =====
-  { id: 'onca-pintada', biome: 'amazonia', type: 'fauna', name: 'Onça-pintada', scientific: 'Panthera onca', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐆',
+  { id: 'onca-pintada', biome: 'amazonia', type: 'fauna', name: 'Onça-pintada', scientific: 'Panthera onca', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐆', image: '/images/fauna/onca-pintada.png', heroImage: '/images/fauna/onca-pintada-hero.png', detailImage: '/images/fauna/onca-pintada-detail.png',
     description: 'O maior felino das Américas e predador de topo da cadeia alimentar na Amazônia. É um símbolo da fauna brasileira e essencial para o equilíbrio ecológico.',
     traits: [{ label: 'Peso', value: 'até 135 kg' }, { label: 'Dieta', value: 'Carnívoro' }, { label: 'Habitat', value: 'Florestas densas' }, { label: 'Distribuição', value: 'América Central e do Sul' }],
     importance: { title: 'Um predador essencial para o equilíbrio da floresta', description: 'Como predadora de topo, a onça-pintada ajuda a regular populações de herbívoros e mesopredadores, mantendo o equilíbrio das cadeias alimentares. Sua presença é indicadora de ecossistemas saudáveis e bem preservados.' },
@@ -25,7 +28,7 @@ export const species: Species[] = [
       { title: 'Boa nadadora', description: 'Diferente da maioria dos felinos, a onça-pintada é uma excelente nadadora e frequentemente caça presas na água, como peixes e jacarés.' },
     ] },
 
-  { id: 'boto-cor-de-rosa', biome: 'amazonia', type: 'fauna', name: 'Boto-cor-de-rosa', scientific: 'Inia geoffrensis', category: 'Mamífero', status: 'Em perigo', emoji: '🐬',
+  { id: 'boto-cor-de-rosa', biome: 'amazonia', type: 'fauna', name: 'Boto-cor-de-rosa', scientific: 'Inia geoffrensis', category: 'Mamífero', status: 'Em perigo', emoji: '🐬', image: '/images/fauna/boto-cor-de-rosa.png',
     description: 'O maior golfinho de rio do mundo, famoso pela coloração rosada dos machos adultos. É cercado de lendas amazônicas e enfrenta ameaças crescentes.',
     traits: [{ label: 'Tamanho', value: 'até 2,5 m' }, { label: 'Dieta', value: 'Peixes' }, { label: 'Habitat', value: 'Rios e igarapés' }, { label: 'Distribuição', value: 'Bacia amazônica' }],
     importance: { title: 'Guardião da saúde dos rios amazônicos', description: 'O boto-cor-de-rosa é um predador de topo nos ecossistemas fluviais, ajudando a controlar as populações de peixes e a manter o equilíbrio das cadeias aquáticas. Sua presença indica rios saudáveis e pouco poluídos.' },
@@ -35,7 +38,7 @@ export const species: Species[] = [
       { title: 'Protagonista de lendas', description: 'Segundo o folclore amazônico, o boto se transforma em um jovem elegante durante as festas juninas para seduzir as moças das comunidades ribeirinhas.' },
     ] },
 
-  { id: 'preguica-real', biome: 'amazonia', type: 'fauna', name: 'Preguiça-real', scientific: 'Choloepus didactylus', category: 'Mamífero', status: 'Pouco preocupante', emoji: '🦥',
+  { id: 'preguica-real', biome: 'amazonia', type: 'fauna', name: 'Preguiça-real', scientific: 'Choloepus didactylus', category: 'Mamífero', status: 'Pouco preocupante', emoji: '🦥', image: '/images/fauna/preguica.png',
     description: 'Mamífero arborícola de movimentos extremamente lentos. Passa a maior parte da vida pendurada nas árvores, descendo ao solo apenas uma vez por semana.',
     traits: [{ label: 'Peso', value: '4–8 kg' }, { label: 'Dieta', value: 'Herbívoro' }, { label: 'Habitat', value: 'Copa das árvores' }, { label: 'Distribuição', value: 'América Central e do Sul' }],
     importance: { title: 'Um ecossistema vivo nas copas da floresta', description: 'A pelagem da preguiça abriga algas, fungos, mariposas e besouros, formando um microecossistema único. Ao descer ao solo para defecar, ela fertiliza as árvores onde vive, contribuindo para o ciclo de nutrientes da floresta.' },
@@ -45,7 +48,7 @@ export const species: Species[] = [
       { title: 'Digestão ultralenta', description: 'A preguiça pode levar até um mês para digerir completamente uma refeição, possuindo um dos metabolismos mais lentos entre os mamíferos.' },
     ] },
 
-  { id: 'harpia', biome: 'amazonia', type: 'fauna', name: 'Harpia', scientific: 'Harpia harpyja', category: 'Ave', status: 'Quase ameaçada', emoji: '🦅',
+  { id: 'harpia', biome: 'amazonia', type: 'fauna', name: 'Harpia', scientific: 'Harpia harpyja', category: 'Ave', status: 'Quase ameaçada', emoji: '🦅', image: '/images/fauna/harpia.png',
     description: 'A mais poderosa ave de rapina das Américas, com garras maiores que as de um urso-pardo. Caça macacos e preguiças no dossel da floresta.',
     traits: [{ label: 'Envergadura', value: 'até 2 m' }, { label: 'Dieta', value: 'Carnívoro' }, { label: 'Habitat', value: 'Dossel florestal' }, { label: 'Distribuição', value: 'América Central e do Sul' }],
     importance: { title: 'A rainha dos céus da floresta', description: 'Como predadora de topo no dossel, a harpia controla populações de primatas e preguiças, evitando a superpopulação que poderia degradar a copa da floresta. Necessita de árvores muito altas para nidificar, sendo indicadora de florestas maduras.' },
@@ -56,7 +59,7 @@ export const species: Species[] = [
     ] },
 
   // ===== AMAZÔNIA — FLORA =====
-  { id: 'castanheira', biome: 'amazonia', type: 'flora', name: 'Castanheira', scientific: 'Bertholletia excelsa', category: 'Árvore', status: 'Vulnerável', emoji: '🌳',
+  { id: 'castanheira', biome: 'amazonia', type: 'flora', name: 'Castanheira', scientific: 'Bertholletia excelsa', category: 'Árvore', status: 'Vulnerável', emoji: '🌳', image: '/images/flora/castanheira.png', heroImage: '/images/flora/castanheira-hero.png', detailImage: '/images/flora/castanheira-detail.png',
     description: 'Uma das maiores árvores da Amazônia, podendo atingir 50 metros. Produz a castanha-do-pará, essencial para a economia extrativista da região.',
     traits: [{ label: 'Altura', value: 'até 50 m' }, { label: 'Fruto', value: 'Castanha-do-pará' }, { label: 'Uso', value: 'Alimentício' }, { label: 'Distribuição', value: 'Amazônia' }],
     importance: { title: 'Uma árvore essencial para a floresta', description: 'A castanheira sustenta uma rede ecológica complexa: depende de abelhas específicas para polinização e de cutias para dispersão de sementes. Sua exploração extrativista gera renda para comunidades tradicionais, incentivando a conservação da floresta em pé.' },
@@ -66,7 +69,7 @@ export const species: Species[] = [
       { title: 'Depende da floresta', description: 'A castanheira não se reproduz em áreas desmatadas, pois depende de polinizadores e dispersores que só existem em florestas preservadas.' },
     ] },
 
-  { id: 'vitoria-regia', biome: 'amazonia', type: 'flora', name: 'Vitória-régia', scientific: 'Victoria amazonica', category: 'Aquática', status: 'Pouco preocupante', emoji: '🪷',
+  { id: 'vitoria-regia', biome: 'amazonia', type: 'flora', name: 'Vitória-régia', scientific: 'Victoria amazonica', category: 'Aquática', status: 'Pouco preocupante', emoji: '🪷', image: '/images/flora/vitoria-regia.png',
     description: 'A maior planta aquática do mundo, com folhas circulares de até 2,5 metros de diâmetro que podem suportar o peso de uma criança.',
     traits: [{ label: 'Folha', value: 'até 2,5 m' }, { label: 'Flor', value: 'Branca/rosa' }, { label: 'Habitat', value: 'Águas calmas' }, { label: 'Distribuição', value: 'Bacia amazônica' }],
     importance: { title: 'Um abrigo vital nos lagos amazônicos', description: 'As enormes folhas da vitória-régia criam sombra e refúgio para peixes, insetos e outros organismos aquáticos. Ela contribui para a oxigenação da água e serve como plataforma de repouso para aves e anfíbios.' },
@@ -76,7 +79,7 @@ export const species: Species[] = [
       { title: 'Flor aquecida', description: 'A flor pode elevar sua temperatura em até 11°C acima do ambiente para volatilizar aromas e atrair besouros polinizadores durante a noite.' },
     ] },
 
-  { id: 'acai', biome: 'amazonia', type: 'flora', name: 'Açaí', scientific: 'Euterpe oleracea', category: 'Palmeira', status: 'Pouco preocupante', emoji: '🌴',
+  { id: 'acai', biome: 'amazonia', type: 'flora', name: 'Açaí', scientific: 'Euterpe oleracea', category: 'Palmeira', status: 'Pouco preocupante', emoji: '🌴', image: '/images/flora/acai.png',
     description: 'Palmeira que produz o famoso fruto açaí, base alimentar das populações ribeirinhas e hoje consumido mundialmente por seu valor nutricional.',
     traits: [{ label: 'Altura', value: '15–25 m' }, { label: 'Fruto', value: 'Açaí' }, { label: 'Uso', value: 'Alimentício' }, { label: 'Distribuição', value: 'Amazônia e Mata Atlântica' }],
     importance: { title: 'O pilar alimentar da Amazônia', description: 'O açaí é a base da alimentação de milhões de ribeirinhos amazônicos e sustenta uma cadeia econômica que vai do extrativista ao mercado internacional. Seus frutos alimentam dezenas de espécies de aves e mamíferos na floresta.' },
@@ -86,7 +89,7 @@ export const species: Species[] = [
       { title: 'Rico em antioxidantes', description: 'O açaí possui uma das maiores concentrações de antocianinas entre os alimentos, com poder antioxidante superior ao da uva e do mirtilo.' },
     ] },
 
-  { id: 'seringueira', biome: 'amazonia', type: 'flora', name: 'Seringueira', scientific: 'Hevea brasiliensis', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌲',
+  { id: 'seringueira', biome: 'amazonia', type: 'flora', name: 'Seringueira', scientific: 'Hevea brasiliensis', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌲', image: '/images/flora/seringueira.png',
     description: 'Árvore da qual se extrai o látex para produção de borracha natural. Foi o centro do ciclo econômico da borracha no século XIX.',
     traits: [{ label: 'Altura', value: 'até 30 m' }, { label: 'Produto', value: 'Látex/borracha' }, { label: 'Uso', value: 'Industrial' }, { label: 'Distribuição', value: 'Amazônia' }],
     importance: { title: 'A árvore que transformou a economia mundial', description: 'A seringueira é a principal fonte de borracha natural do mundo, matéria-prima insubstituível para pneus de aviação e equipamentos médicos. Seu extrativismo sustentável motivou a criação de reservas extrativistas na Amazônia, protegendo milhões de hectares de floresta.' },
@@ -97,7 +100,7 @@ export const species: Species[] = [
     ] },
 
   // ===== CERRADO — FAUNA =====
-  { id: 'lobo-guara', biome: 'cerrado', type: 'fauna', name: 'Lobo-guará', scientific: 'Chrysocyon brachyurus', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐺',
+  { id: 'lobo-guara', biome: 'cerrado', type: 'fauna', name: 'Lobo-guará', scientific: 'Chrysocyon brachyurus', category: 'Mamífero', status: 'Quase ameaçada', emoji: '🐺', image: '/images/fauna/lobo-guara.png', heroImage: '/images/fauna/lobo-guara-hero.png', detailImage: '/images/fauna/lobo-guara-detail.png',
     description: 'O maior canídeo da América do Sul, com pernas longas adaptadas para caminhar pela vegetação alta do Cerrado. Alimenta-se de frutos e pequenos animais.',
     traits: [{ label: 'Altura', value: 'até 90 cm' }, { label: 'Dieta', value: 'Onívoro' }, { label: 'Habitat', value: 'Campos e cerrado' }, { label: 'Distribuição', value: 'Brasil central e países vizinhos' }],
     importance: { title: 'O jardineiro do Cerrado', description: 'O lobo-guará é um dos principais dispersores de sementes do Cerrado, especialmente da lobeira (fruta-do-lobo). Ao defecar em áreas abertas, ele promove a germinação de plantas e a regeneração da vegetação nativa.' },
@@ -117,7 +120,7 @@ export const species: Species[] = [
       { title: 'Consome milhares de insetos', description: 'Em uma única noite de forrageamento, o tatu-canastra pode consumir dezenas de milhares de formigas e cupins, controlando naturalmente essas populações.' },
     ] },
 
-  { id: 'seriema', biome: 'cerrado', type: 'fauna', name: 'Seriema', scientific: 'Cariama cristata', category: 'Ave', status: 'Pouco preocupante', emoji: '🐦',
+  { id: 'seriema', biome: 'cerrado', type: 'fauna', name: 'Seriema', scientific: 'Cariama cristata', category: 'Ave', status: 'Pouco preocupante', emoji: '🐦', image: '/images/fauna/seriema.png',
     description: 'Ave terrestre de pernas longas, conhecida pelo canto alto que pode ser ouvido a quilômetros. Caça cobras e lagartos no chão do cerrado.',
     traits: [{ label: 'Altura', value: 'até 90 cm' }, { label: 'Dieta', value: 'Carnívoro' }, { label: 'Habitat', value: 'Campos abertos' }, { label: 'Distribuição', value: 'Brasil central e meridional' }],
     importance: { title: 'A caçadora de serpentes do Cerrado', description: 'A seriema desempenha um papel importante no controle de populações de cobras, lagartos e roedores nos campos do Cerrado. Sua presença indica ambientes com vegetação nativa preservada e equilíbrio ecológico.' },
@@ -127,7 +130,7 @@ export const species: Species[] = [
       { title: 'Canto de alerta', description: 'Seu canto estridente pode ser ouvido a mais de 3 km de distância e é frequentemente utilizado como alarme matinal por moradores de áreas rurais.' },
     ] },
 
-  { id: 'tamanduá-bandeira', biome: 'cerrado', type: 'fauna', name: 'Tamanduá-bandeira', scientific: 'Myrmecophaga tridactyla', category: 'Mamífero', status: 'Vulnerável', emoji: '🐾',
+  { id: 'tamanduá-bandeira', biome: 'cerrado', type: 'fauna', name: 'Tamanduá-bandeira', scientific: 'Myrmecophaga tridactyla', category: 'Mamífero', status: 'Vulnerável', emoji: '🐾', image: '/images/fauna/tamandua-bandeira.png',
     description: 'Mamífero com língua de até 60 cm que pode consumir 30 mil formigas por dia. Sua cauda funciona como cobertor durante o sono.',
     traits: [{ label: 'Peso', value: 'até 45 kg' }, { label: 'Dieta', value: 'Insetívoro' }, { label: 'Habitat', value: 'Campos e cerrado' }, { label: 'Distribuição', value: 'América Central e do Sul' }],
     importance: { title: 'O regulador natural de insetos', description: 'O tamanduá-bandeira é fundamental para o controle de populações de formigas e cupins no Cerrado. Ao abrir cupinzeiros e formigueiros, também facilita o acesso de outras espécies a esses recursos e promove a aeração do solo.' },
@@ -138,7 +141,7 @@ export const species: Species[] = [
     ] },
 
   // ===== CERRADO — FLORA =====
-  { id: 'ipê-amarelo', biome: 'cerrado', type: 'flora', name: 'Ipê-amarelo', scientific: 'Handroanthus albus', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌼',
+  { id: 'ipê-amarelo', biome: 'cerrado', type: 'flora', name: 'Ipê-amarelo', scientific: 'Handroanthus albus', category: 'Árvore', status: 'Pouco preocupante', emoji: '🌼', image: '/images/flora/ipe-amarelo.png',
     description: 'Árvore-símbolo do Brasil, cujas flores amarelas cobrem completamente a copa durante o inverno, antes das novas folhas surgirem.',
     traits: [{ label: 'Altura', value: '6–14 m' }, { label: 'Floração', value: 'Jun–Set' }, { label: 'Uso', value: 'Ornamental' }, { label: 'Distribuição', value: 'Cerrado e Mata Atlântica' }],
     importance: { title: 'Um símbolo de resistência e beleza', description: 'O ipê-amarelo floresce justamente na estação seca, quando a maioria das plantas está sem folhas, fornecendo néctar e pólen essenciais para abelhas e beija-flores nesse período de escassez. É amplamente utilizado em arborização urbana e projetos de recuperação ambiental.' },
@@ -148,7 +151,7 @@ export const species: Species[] = [
       { title: 'Floração sincronizada', description: 'Todos os ipês de uma região florescem quase ao mesmo tempo, criando um espetáculo visual que dura apenas 5 a 7 dias antes das pétalas caírem.' },
     ] },
 
-  { id: 'pequi', biome: 'cerrado', type: 'flora', name: 'Pequi', scientific: 'Caryocar brasiliense', category: 'Árvore', status: 'Pouco preocupante', emoji: '🫒',
+  { id: 'pequi', biome: 'cerrado', type: 'flora', name: 'Pequi', scientific: 'Caryocar brasiliense', category: 'Árvore', status: 'Pouco preocupante', emoji: '🫒', image: '/images/flora/pequizeiro.png', heroImage: '/images/flora/pequizeiro-hero.png', detailImage: '/images/flora/pequizeiro-detail.png',
     description: 'Fruto emblemático da culinária do Cerrado. A árvore tem casca grossa resistente ao fogo, adaptação típica da vegetação do bioma.',
     traits: [{ label: 'Altura', value: 'até 10 m' }, { label: 'Fruto', value: 'Pequi' }, { label: 'Uso', value: 'Alimentício' }, { label: 'Distribuição', value: 'Cerrado brasileiro' }],
     importance: { title: 'O tesouro culinário do Cerrado', description: 'O pequi é uma espécie-chave para a cultura e economia das comunidades do Cerrado, gerando renda para milhares de famílias extrativistas. Seus frutos alimentam aves, mamíferos e insetos, e sua casca grossa permite sobreviver às queimadas naturais do bioma.' },
@@ -158,7 +161,7 @@ export const species: Species[] = [
       { title: 'Resistente ao fogo', description: 'A casca suberosa do pequizeiro pode ter mais de 5 cm de espessura, protegendo o câmbio vascular das queimadas que ciclicamente varrem o Cerrado.' },
     ] },
 
-  { id: 'buriti', biome: 'cerrado', type: 'flora', name: 'Buriti', scientific: 'Mauritia flexuosa', category: 'Palmeira', status: 'Pouco preocupante', emoji: '🌴',
+  { id: 'buriti', biome: 'cerrado', type: 'flora', name: 'Buriti', scientific: 'Mauritia flexuosa', category: 'Palmeira', status: 'Pouco preocupante', emoji: '🌴', image: '/images/flora/buriti.png',
     description: 'A "árvore da vida" do Cerrado, encontrada nas veredas. Seus frutos alimentam dezenas de espécies, e do tronco se extrai fibra e palmito.',
     traits: [{ label: 'Altura', value: 'até 30 m' }, { label: 'Fruto', value: 'Buriti' }, { label: 'Habitat', value: 'Veredas' }, { label: 'Importância', value: 'Alimento e artesanato' }],
     importance: { title: 'A árvore da vida nas veredas do Cerrado', description: 'O buriti é uma espécie-chave das veredas, ambientes úmidos do Cerrado que funcionam como nascentes e corredores ecológicos. Seus frutos alimentam araras, emas, antas e dezenas de outras espécies. Praticamente todas as partes da planta são aproveitadas pelas comunidades locais.' },

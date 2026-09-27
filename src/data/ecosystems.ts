@@ -5,6 +5,9 @@ export interface Ecosystem {
   category: string;
   description: string;
   emoji: string;
+  image?: string;
+  heroImage?: string;
+  detailImage?: string;
   subtitle: string;
   traits: { label: string; value: string }[];
   about: string;
@@ -14,7 +17,7 @@ export interface Ecosystem {
 
 export const ecosystems: Ecosystem[] = [
   // ===== AMAZÔNIA =====
-  { id: 'terra-firme', biome: 'amazonia', name: 'Terra firme', category: 'Terra firme', emoji: '🌳',
+  { id: 'terra-firme', biome: 'amazonia', name: 'Terra firme', category: 'Terra firme', emoji: '🌳', image: '/images/ecosystems/terra-firme.png', heroImage: '/images/ecosystems/terra-firme-hero.png', detailImage: '/images/ecosystems/terra-firme-detail.png',
     description: 'Áreas que não sofrem alagamentos periódicos, com grande diversidade de árvores e animais.',
     subtitle: 'Floresta não alagável',
     traits: [
@@ -31,7 +34,7 @@ export const ecosystems: Ecosystem[] = [
       { title: 'Grande diversidade de vida', description: 'A variedade de plantas cria diferentes habitats para animais, fungos e outros organismos em cada estrato da floresta.' },
     ],
   },
-  { id: 'rios-amazonicos', biome: 'amazonia', name: 'Rios amazônicos', category: 'Rios', emoji: '🏞️',
+  { id: 'rios-amazonicos', biome: 'amazonia', name: 'Rios amazônicos', category: 'Rios', emoji: '🏞️', image: '/images/ecosystems/rios-amazonicos.png',
     description: 'Uma extensa rede de rios que conecta diferentes ambientes e sustenta inúmeras formas de vida.',
     subtitle: 'A maior rede fluvial do mundo',
     traits: [
@@ -48,7 +51,7 @@ export const ecosystems: Ecosystem[] = [
       { title: 'Encontro das águas', description: 'O encontro do rio Negro com o Solimões cria um fenômeno visual onde as águas escuras e claras correm lado a lado sem se misturar por quilômetros.' },
     ],
   },
-  { id: 'varzeas', biome: 'amazonia', name: 'Várzeas', category: 'Várzeas', emoji: '💧',
+  { id: 'varzeas', biome: 'amazonia', name: 'Várzeas', category: 'Várzeas', emoji: '💧', image: '/images/ecosystems/varzeas.png',
     description: 'Áreas periodicamente inundadas pelos rios, formando ambientes ricos em nutrientes.',
     subtitle: 'Planície fértil de inundação',
     traits: [
@@ -65,7 +68,7 @@ export const ecosystems: Ecosystem[] = [
       { title: 'Berçário de peixes', description: 'Mais de 200 espécies de peixes dependem das várzeas para reprodução, incluindo espécies de grande importância econômica como o tambaqui.' },
     ],
   },
-  { id: 'igapos', biome: 'amazonia', name: 'Igapós', category: 'Igapós', emoji: '🌊',
+  { id: 'igapos', biome: 'amazonia', name: 'Igapós', category: 'Igapós', emoji: '🌊', image: '/images/ecosystems/igapos.png',
     description: 'Florestas que permanecem alagadas por longos períodos, adaptadas às águas escuras dos rios.',
     subtitle: 'Floresta de águas negras',
     traits: [
