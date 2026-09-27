@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { getBiomeBySlug } from '../data/biomes';
-import { getEcosystemById, getEcosystemsByBiome } from '../data/ecosystems';
+import { useBiome } from '../hooks/useBiomes';
+import { useEcosystemById, useEcosystemsByBiome } from '../hooks/useEcosystems';
 import Breadcrumb from '../components/Breadcrumb';
 import useScrollReveal from '../hooks/useScrollReveal';
 import styles from './EcosystemDetail.module.css';
@@ -19,8 +19,11 @@ function Section({ children, className }: { children: React.ReactNode; className
 
 export default function EcosystemDetail() {
   const { biome: biomeSlug, id } = useParams<{ biome: string; id: string }>();
-  const biome = getBiomeBySlug(biomeSlug || '');
-  const ecosystem = getEcosystemById(id || '');
+  const { biome, loading: loadingBiome } = useBiome(biomeSlug);
+  const { ecosystem, loading: loadingEco } = useEcosystemById(id);
+  const { ecosystems: relatedAll, loading: loadingRelated } = useEcosystemsByBiome(biomeSlug);
+
+  if (loadingBiome || loadingEco || loadingRelated) return null;
 
   if (!biome || !ecosystem) {
     return (
@@ -33,8 +36,7 @@ export default function EcosystemDetail() {
     );
   }
 
-  const related = getEcosystemsByBiome(biome.slug)
-    .filter((e) => e.id !== ecosystem.id);
+  const related = relatedAll.filter((e) => e.id !== ecosystem.id);
 
   return (
     <div className={styles.page} data-biome={biome.slug}>
@@ -56,15 +58,15 @@ export default function EcosystemDetail() {
             <p className={styles.heroDesc}>{ecosystem.description}</p>
           </div>
           <div className={styles.heroImage}>
-            {ecosystem.heroImage ? (
-              <img src={ecosystem.heroImage} alt={ecosystem.name} className={styles.heroPhoto} />
+            {ecosystem.hero_image ? (
+              <img src={ecosystem.hero_image} alt={ecosystem.name} className={styles.heroPhoto} />
             ) : (
               ecosystem.emoji
             )}
           </div>
         </div>
 
-        {/* informa„á„ïes */}
+        {/* informaÔøΩÔøΩes */}
         <Section className={styles.infoSection}>
           <p className="eyebrow" style={{ textAlign: 'center' }}>INFORMA√á√ïES DO ECOSSISTEMA</p>
           <div className={styles.infoGrid}>
@@ -84,12 +86,12 @@ export default function EcosystemDetail() {
           <p className={styles.aboutText}>{ecosystem.about}</p>
         </Section>
 
-        {/* import„Çncia ecol„ìgica */}
+        {/* importÔøΩncia ecolÔøΩgica */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
-              {ecosystem.detailImage ? (
-                <img src={ecosystem.detailImage} alt={ecosystem.name} className={styles.importancePhoto} />
+              {ecosystem.detail_image ? (
+                <img src={ecosystem.detail_image} alt={ecosystem.name} className={styles.importancePhoto} />
               ) : (
                 ecosystem.emoji
               )}
@@ -102,12 +104,12 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* voc„ä sabia? */}
+        {/* vocÔøΩ sabia? */}
         <Section className={styles.factsSection}>
           <p className="eyebrow">VOC√ä SABIA?</p>
           <h2 className={styles.factsTitle}>Curiosidades sobre o ecossistema</h2>
           <div className={styles.factsGrid}>
-            {ecosystem.funFacts.map((fact, i) => (
+            {ecosystem.fun_facts.map((fact, i) => (
               <div key={i} className={styles.factCard}>
                 <span className={styles.factNumber}>{String(i + 1).padStart(2, '0')}</span>
                 <h3 className={styles.factTitle}>{fact.title}</h3>
@@ -142,7 +144,7 @@ export default function EcosystemDetail() {
           </Section>
         )}
 
-        {/* navega„á„Éo */}
+        {/* navegaÔøΩÔøΩo */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/ecossistemas`} className="btn-outline">
             ‚Üê Voltar para Ecossistemas

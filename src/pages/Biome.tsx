@@ -1,12 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
-import { getBiomeBySlug } from '../data/biomes';
+import { useBiome } from '../hooks/useBiomes';
 import Breadcrumb from '../components/Breadcrumb';
 import BiomeVideo from '../components/BiomeVideo';
 import styles from './Biome.module.css';
 
 export default function Biome() {
   const { biome: slug } = useParams<{ biome: string }>();
-  const biome = getBiomeBySlug(slug || '');
+  const { biome, loading } = useBiome(slug);
+
+  if (loading) return null;
 
   if (!biome) {
     return (
@@ -53,7 +55,7 @@ export default function Biome() {
 
         <section className={styles.bioSection}>
           <h2 className={styles.bioTitle}>Biodiversidade</h2>
-          <p className={styles.bioSubtitle}>{biome.biodiversitySubtitle}</p>
+          <p className={styles.bioSubtitle}>{biome.biodiversity_subtitle}</p>
 
           <div className={styles.bioGrid}>
             {sections.map((section) => (

@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
         <div className={styles.links}>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="http://www.linkedin.com/in/sofia-bezerra-belem" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="#">Fontes</a>
         </div>
       </div>

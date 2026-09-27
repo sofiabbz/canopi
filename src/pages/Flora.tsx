@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getBiomeBySlug } from '../data/biomes';
-import { getSpeciesByBiome } from '../data/species';
+import { useBiome } from '../hooks/useBiomes';
+import { useSpeciesByBiome } from '../hooks/useSpecies';
 import Breadcrumb from '../components/Breadcrumb';
 import RevealCard from '../components/RevealCard';
 import styles from './Listing.module.css';
 
 export default function Flora() {
   const { biome: slug } = useParams<{ biome: string }>();
-  const biome = getBiomeBySlug(slug || '');
+  const { biome, loading: loadingBiome } = useBiome(slug);
+  const { species: allSpecies, loading: loadingSpecies } = useSpeciesByBiome(slug, 'flora');
   const [activeFilter, setActiveFilter] = useState('Todas');
   const [search, setSearch] = useState('');
 
+  if (loadingBiome || loadingSpecies) return null;
   if (!biome) return null;
-
-  const allSpecies = getSpeciesByBiome(biome.slug, 'flora');
   const filters = ['Todas', ...biome.flora.categories];
   const filtered = allSpecies
     .filter((s) => activeFilter === 'Todas' || s.category === activeFilter)

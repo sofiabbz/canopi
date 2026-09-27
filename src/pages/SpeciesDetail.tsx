@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { getBiomeBySlug } from '../data/biomes';
-import { getSpeciesById, getSpeciesByBiome } from '../data/species';
+import { useBiome } from '../hooks/useBiomes';
+import { useSpeciesById, useSpeciesByBiome } from '../hooks/useSpecies';
 import Breadcrumb from '../components/Breadcrumb';
 import useScrollReveal from '../hooks/useScrollReveal';
 import styles from './SpeciesDetail.module.css';
@@ -35,8 +35,11 @@ function Section({ children, className }: { children: React.ReactNode; className
 
 export default function SpeciesDetail() {
   const { biome: biomeSlug, id } = useParams<{ biome: string; id: string }>();
-  const biome = getBiomeBySlug(biomeSlug || '');
-  const species = getSpeciesById(id || '');
+  const { biome, loading: loadingBiome } = useBiome(biomeSlug);
+  const { species, loading: loadingSpecies } = useSpeciesById(id);
+  const { species: relatedAll, loading: loadingRelated } = useSpeciesByBiome(biomeSlug, species?.type || 'fauna');
+
+  if (loadingBiome || loadingSpecies || loadingRelated) return null;
 
   if (!biome || !species) {
     return (
@@ -57,8 +60,7 @@ export default function SpeciesDetail() {
   const statusColor = statusIdx >= 0 ? STATUS_LEVELS[statusIdx].color : '#8a9a82';
   const statusPercent = statusIdx >= 0 ? ((statusIdx + 1) / STATUS_LEVELS.length) * 100 : 0;
 
-  const related = getSpeciesByBiome(biome.slug, species.type)
-    .filter((s) => s.id !== species.id);
+  const related = relatedAll.filter((s) => s.id !== species.id);
 
   return (
     <div className={styles.page} data-biome={biome.slug}>
@@ -80,15 +82,15 @@ export default function SpeciesDetail() {
             <p className={styles.heroDesc}>{species.description}</p>
           </div>
           <div className={styles.heroImage}>
-            {species.heroImage ? (
-              <img src={species.heroImage} alt={species.name} className={styles.heroPhoto} />
+            {species.hero_image ? (
+              <img src={species.hero_image} alt={species.name} className={styles.heroPhoto} />
             ) : (
               <span className={styles.heroEmoji}>{species.emoji}</span>
             )}
           </div>
         </div>
 
-        {/* status de conserva„á„Éo */}
+        {/* status de conservaÔøΩÔøΩo */}
         <Section className={styles.statusSection}>
           <p className={`eyebrow ${styles.centered}`}>STATUS DE CONSERVA√á√ÉO</p>
           <div className={styles.statusBar}>
@@ -115,7 +117,7 @@ export default function SpeciesDetail() {
           </p>
         </Section>
 
-        {/* informa„á„ïes */}
+        {/* informaÔøΩÔøΩes */}
         <Section className={styles.infoSection}>
           <p className={`eyebrow ${styles.centered}`}>
             INFORMA√á√ïES DA ESP√âCIE
@@ -137,12 +139,12 @@ export default function SpeciesDetail() {
           <p className={styles.aboutText}>{species.description}</p>
         </Section>
 
-        {/* import„Çncia ecol„ìgica */}
+        {/* importÔøΩncia ecolÔøΩgica */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
-              {species.detailImage ? (
-                <img src={species.detailImage} alt={species.name} className={styles.importancePhoto} />
+              {species.detail_image ? (
+                <img src={species.detail_image} alt={species.name} className={styles.importancePhoto} />
               ) : (
                 <span className={styles.importanceEmoji}>{species.emoji}</span>
               )}
@@ -155,12 +157,12 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* voc„ä sabia? */}
+        {/* vocÔøΩ sabia? */}
         <Section className={styles.funFactsSection}>
           <p className={`eyebrow ${styles.centered}`}>VOC√ä SABIA?</p>
           <h2 className={styles.funFactsTitle}>Curiosidades sobre a esp√©cie</h2>
           <div className={styles.funFactsGrid}>
-            {species.funFacts.map((fact, i) => (
+            {species.fun_facts.map((fact, i) => (
               <div key={i} className={styles.funFactCard}>
                 <span className={styles.funFactNumber}>
                   {String(i + 1).padStart(2, '0')}
@@ -172,7 +174,7 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* esp„âcies relacionadas */}
+        {/* espÔøΩcies relacionadas */}
         {related.length > 0 && (
           <Section className={styles.relatedSection}>
             <p className={`eyebrow ${styles.centered}`}>CONTINUE EXPLORANDO</p>
@@ -198,7 +200,7 @@ export default function SpeciesDetail() {
           </Section>
         )}
 
-        {/* navega„á„Éo */}
+        {/* navegaÔøΩÔøΩo */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/${sectionRoute}`} className="btn-outline">
             ‚Üê Voltar para {sectionLabel}

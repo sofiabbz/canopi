@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getBiomeBySlug } from '../data/biomes';
-import { getEcosystemsByBiome } from '../data/ecosystems';
+import { useBiome } from '../hooks/useBiomes';
+import { useEcosystemsByBiome } from '../hooks/useEcosystems';
 import Breadcrumb from '../components/Breadcrumb';
 import styles from './Listing.module.css';
 
 export default function Ecosystems() {
   const { biome: slug } = useParams<{ biome: string }>();
-  const biome = getBiomeBySlug(slug || '');
+  const { biome, loading: loadingBiome } = useBiome(slug);
+  const { ecosystems: allEcos, loading: loadingEcos } = useEcosystemsByBiome(slug);
   const [activeFilter, setActiveFilter] = useState('Todos');
   const [search, setSearch] = useState('');
 
+  if (loadingBiome || loadingEcos) return null;
   if (!biome) return null;
-
-  const allEcos = getEcosystemsByBiome(biome.slug);
   const filters = ['Todos', ...biome.ecosystems.categories];
   const filtered = allEcos
     .filter((e) => activeFilter === 'Todos' || e.category === activeFilter)

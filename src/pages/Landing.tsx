@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { biomes } from '../data/biomes';
+import { useBiomes } from '../hooks/useBiomes';
 import useScrollReveal from '../hooks/useScrollReveal';
 import styles from './Landing.module.css';
 
@@ -48,6 +48,10 @@ const features = [
 ];
 
 export default function Landing() {
+  const { biomes, loading } = useBiomes();
+
+  if (loading) return null;
+
   return (
     <div className={styles.landing}>
       {/* hero */}

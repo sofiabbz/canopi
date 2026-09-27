@@ -1,0 +1,75 @@
+-- Atualiza as imagens das espécies com fotos reais do iNaturalist
+-- Fonte: API do iNaturalist (https://api.inaturalist.org)
+-- Licenças: Creative Commons (cc-by, cc-by-nc, cc0, cc-by-sa, etc.)
+
+-- amazônia — fauna
+UPDATE species SET image = 'https://static.inaturalist.org/photos/51015966/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/51015966/large.jpg', detail_image = 'https://static.inaturalist.org/photos/51015966/original.jpg' WHERE id = 'onca-pintada';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/64064991/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/64064991/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/64064991/original.jpeg' WHERE id = 'boto-cor-de-rosa';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/58412187/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/58412187/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/58412187/original.jpeg' WHERE id = 'preguica-real';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/447085421/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/447085421/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/447085421/original.jpeg' WHERE id = 'harpia';
+
+-- amazônia — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/106004315/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/106004315/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/106004315/original.jpg' WHERE id = 'castanheira';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/1036591/medium.JPG', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/1036591/large.JPG', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/1036591/original.JPG' WHERE id = 'vitoria-regia';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/313382197/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/313382197/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/313382197/original.jpg' WHERE id = 'acai';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/60706943/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/60706943/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/60706943/original.jpeg' WHERE id = 'seringueira';
+
+-- cerrado — fauna
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/698951231/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/698951231/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/698951231/original.jpg' WHERE id = 'lobo-guara';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/59695247/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/59695247/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/59695247/original.jpg' WHERE id = 'tatu-canastra';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/467050157/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/467050157/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/467050157/original.jpg' WHERE id = 'seriema';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/108811809/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/108811809/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/108811809/original.jpg' WHERE id = 'tamandua-bandeira';
+
+-- cerrado — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/93558645/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/93558645/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/93558645/original.jpeg' WHERE id = 'ipe-amarelo';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/438823550/medium.jpeg', hero_image = 'https://static.inaturalist.org/photos/438823550/large.jpeg', detail_image = 'https://static.inaturalist.org/photos/438823550/original.jpeg' WHERE id = 'pequi';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/54264643/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/54264643/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/54264643/original.jpg' WHERE id = 'buriti';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/30180649/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/30180649/large.jpg', detail_image = 'https://static.inaturalist.org/photos/30180649/original.jpg' WHERE id = 'barbatimao';
+
+-- mata atlântica — fauna
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4910030/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4910030/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4910030/original.jpg' WHERE id = 'mico-leao-dourado';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/162732114/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/162732114/large.jpg', detail_image = 'https://static.inaturalist.org/photos/162732114/original.jpg' WHERE id = 'muriqui';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/210402416/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/210402416/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/210402416/original.jpg' WHERE id = 'tucano-de-bico-preto';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/552302712/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/552302712/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/552302712/original.jpg' WHERE id = 'jaguatirica';
+
+-- mata atlântica — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/26448062/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/26448062/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/26448062/original.jpeg' WHERE id = 'pau-brasil';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/148161929/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/148161929/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/148161929/original.jpeg' WHERE id = 'jussara';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/47494388/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/47494388/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/47494388/original.jpeg' WHERE id = 'bromelia-imperial';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/original.jpg' WHERE id = 'ipe-roxo';
+
+-- caatinga — fauna
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/157825506/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/157825506/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/157825506/original.jpg' WHERE id = 'ararinha-azul';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/683160535/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/683160535/large.jpg', detail_image = 'https://static.inaturalist.org/photos/683160535/original.jpg' WHERE id = 'tatu-bola';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/45669/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/45669/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/45669/original.jpg' WHERE id = 'calango';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/217443938/medium.jpeg', hero_image = 'https://static.inaturalist.org/photos/217443938/large.jpeg', detail_image = 'https://static.inaturalist.org/photos/217443938/original.jpeg' WHERE id = 'moco';
+
+-- caatinga — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/172273362/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/172273362/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/172273362/original.jpg' WHERE id = 'mandacaru';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/137446616/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/137446616/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/137446616/original.jpeg' WHERE id = 'umbuzeiro';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/109339307/medium.jpeg', hero_image = 'https://static.inaturalist.org/photos/109339307/large.jpeg', detail_image = 'https://static.inaturalist.org/photos/109339307/original.jpeg' WHERE id = 'xique-xique';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/187757122/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/187757122/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/187757122/original.jpeg' WHERE id = 'catingueira';
+
+-- pampa — fauna
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/452499371/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/452499371/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/452499371/original.jpg' WHERE id = 'veado-campeiro';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/197996759/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/197996759/large.jpg', detail_image = 'https://static.inaturalist.org/photos/197996759/original.jpg' WHERE id = 'graxaim';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/182076045/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/182076045/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/182076045/original.jpg' WHERE id = 'joao-de-barro';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/601222938/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/601222938/large.jpg', detail_image = 'https://static.inaturalist.org/photos/601222938/original.jpg' WHERE id = 'quero-quero';
+
+-- pampa — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/231968892/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/231968892/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/231968892/original.jpeg' WHERE id = 'capim-barba-de-bode';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/6875282/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/6875282/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/6875282/original.jpeg' WHERE id = 'algarrobo';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/654004464/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/654004464/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/654004464/original.jpg' WHERE id = 'pitanga';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/37168063/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/37168063/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/37168063/original.jpg' WHERE id = 'marcela';
+
+-- pantanal — fauna
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/578900/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/578900/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/578900/original.jpg' WHERE id = 'tuiuiu';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/144156185/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/144156185/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/144156185/original.jpg' WHERE id = 'arara-azul';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4544390/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4544390/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/4544390/original.jpg' WHERE id = 'jacare-do-pantanal';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/91546944/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/91546944/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/91546944/original.jpg' WHERE id = 'capivara';
+
+-- pantanal — flora
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539921449/original.jpg' WHERE id = 'piuva';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/28107964/medium.jpeg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/28107964/large.jpeg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/28107964/original.jpeg' WHERE id = 'camalote';
+UPDATE species SET image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/12330626/medium.jpg', hero_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/12330626/large.jpg', detail_image = 'https://inaturalist-open-data.s3.amazonaws.com/photos/12330626/original.jpg' WHERE id = 'acuri';
+UPDATE species SET image = 'https://static.inaturalist.org/photos/318230625/medium.jpg', hero_image = 'https://static.inaturalist.org/photos/318230625/large.jpg', detail_image = 'https://static.inaturalist.org/photos/318230625/original.jpg' WHERE id = 'cambara';

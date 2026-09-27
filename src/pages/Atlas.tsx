@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { biomes } from '../data/biomes';
+import { useBiomes } from '../hooks/useBiomes';
 import styles from './Atlas.module.css';
 
 const BIOME_MAP: Record<string, string> = {
@@ -28,10 +28,13 @@ const BIOME_PATHS: Record<string, string> = {
 };
 
 export default function Atlas() {
+  const { biomes, loading } = useBiomes();
   const [activeBiome, setActiveBiome] = useState<string | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const mapRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  if (loading) return null;
 
   const handleBiomeClick = (slug: string) => {
     navigate(`/${slug}`);
