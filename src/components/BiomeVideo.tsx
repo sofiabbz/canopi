@@ -6,14 +6,8 @@ interface BiomeVideoProps {
   color: string;
 }
 
-const videoModules = import.meta.glob<string>(
-  '../assets/videos/*.mp4',
-  { eager: true, query: '?url', import: 'default' }
-);
-
-function getVideoUrl(slug: string): string | undefined {
-  const key = `../assets/videos/${slug}.mp4`;
-  return videoModules[key];
+function getVideoUrl(slug: string): string {
+  return `/videos/${slug}.mp4`;
 }
 
 export default function BiomeVideo({ slug, color }: BiomeVideoProps) {
