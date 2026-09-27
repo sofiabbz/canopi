@@ -1,0 +1,171 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* ===== IMAGE AREA ===== */
+
+.imageArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-card-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.emoji {
+  font-size: 56px;
+  filter: brightness(0) saturate(0);
+  opacity: 0.3;
+  transition: filter 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Scanline que percorre de cima pra baixo ao revelar */
+.scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(82, 183, 136, 0.08) 45%,
+    rgba(82, 183, 136, 0.15) 50%,
+    rgba(82, 183, 136, 0.08) 55%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  background-position: 0 -100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.revealLabel {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* ===== SCROLL REVEAL (mobile + desktop) ===== */
+
+.card.visible .emoji {
+  opacity: 0.35;
+  filter: brightness(0) saturate(0);
+}
+
+.card.visible .scanline {
+  opacity: 1;
+  animation: scan 0.8s 0.2s ease-out forwards;
+}
+
+@keyframes scan {
+  from { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
+}
+
+/* ===== HOVER REVEAL (desktop) ===== */
+
+.card:hover .emoji {
+  filter: brightness(1) saturate(1);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.card:hover .scanline {
+  opacity: 0;
+}
+
+.card:hover .revealLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Brilho sutil no fundo ao revelar */
+.card:hover .imageArea {
+  background: radial-gradient(
+    circle at center,
+    rgba(82, 183, 136, 0.08) 0%,
+    var(--bg-card-hover) 70%
+  );
+}
+
+/* ===== INFO ===== */
+
+.info {
+  padding: 16px;
+  text-align: center;
+}
+
+.category {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.name {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 4px;
+}
+
+.scientific {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+  .emoji {
+    font-size: 44px;
+  }
+
+  .revealLabel {
+    display: none;
+  }
+
+  /* No mobile, reveal automático via scroll */
+  .card.visible .emoji {
+    filter: brightness(1) saturate(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emoji {
+    filter: none;
+    opacity: 1;
+  }
+
+  .scanline {
+    display: none;
+  }
+
+  .card,
+  .card:hover {
+    transform: none;
+  }
+}

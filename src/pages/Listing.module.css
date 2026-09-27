@@ -1,0 +1,210 @@
+.page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ===== HEADER ===== */
+
+.headerCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+}
+
+.headerTitle {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 16px;
+  line-height: 1.2;
+}
+
+.headerDesc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 12px;
+  max-width: 560px;
+}
+
+/* ===== SEARCH + FILTERS ===== */
+
+.controls {
+  margin-top: 32px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  max-width: 480px;
+}
+
+.searchIcon {
+  font-size: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-bright);
+  font-size: 14px;
+  font-family: var(--font-body);
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* ===== GRID ===== */
+
+.gridLabel {
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-cards);
+  margin-top: 16px;
+}
+
+/* ===== SPECIES CARD ===== */
+
+.speciesCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.speciesCard:hover {
+  border-color: var(--accent);
+}
+
+.speciesImage {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-card-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.speciesInfo {
+  padding: 16px;
+  text-align: center;
+}
+
+.speciesCategory {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.speciesName {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 4px;
+}
+
+.speciesScientific {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== ECOSYSTEM CARD ===== */
+
+.ecoCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.ecoCard:hover {
+  border-color: var(--accent);
+}
+
+.ecoImage {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--bg-card-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.ecoInfo {
+  padding: 16px;
+  text-align: center;
+}
+
+.ecoName {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.ecoDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .headerTitle {
+    font-size: 26px;
+  }
+
+  .headerCard {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

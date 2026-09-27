@@ -1,0 +1,135 @@
+.page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-family: var(--font-title);
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 12px;
+  line-height: 1.15;
+}
+
+.heroDesc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+/* ===== CARDS GRID ===== */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-cards);
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--padding-card);
+}
+
+.cardTitle {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 12px;
+}
+
+.cardText {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* ===== TECH ===== */
+
+.techSection {
+  margin-top: var(--gap-sections);
+}
+
+.sectionTitle {
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 12px;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-cards);
+  margin-top: 24px;
+}
+
+.techCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.techName {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.techDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ===== CTA ===== */
+
+.ctaSection {
+  margin-top: var(--gap-sections);
+  text-align: center;
+  padding: 48px 0;
+}
+
+.ctaText {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+}

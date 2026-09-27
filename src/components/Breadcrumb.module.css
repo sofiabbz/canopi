@@ -1,0 +1,36 @@
+.breadcrumb {
+  padding: 10px 0;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.separator {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.link {
+  font-size: 13px;
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.current {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}

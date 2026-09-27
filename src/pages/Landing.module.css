@@ -1,0 +1,413 @@
+/* ========================
+   LANDING PAGE
+   ======================== */
+
+.landing {
+  padding-bottom: 40px;
+}
+
+/* ===== SCROLL REVEAL ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== HERO ===== */
+
+.heroSection {
+  padding-top: 48px;
+}
+
+.heroCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+  min-height: 340px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.heroTitle {
+  font-family: var(--font-title);
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--text-bright);
+  line-height: 1.15;
+  margin-top: 16px;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.heroText {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 420px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroImagePlaceholder {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4/3;
+  background: var(--bg-card-hover);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+/* ===== STATS ===== */
+
+.statsSection {
+  padding-top: 48px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  text-align: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.statLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ===== BIOMAS ===== */
+
+.biomesSection {
+  padding-top: var(--gap-sections);
+}
+
+.sectionTitle {
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 12px;
+}
+
+.sectionDesc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  max-width: 480px;
+}
+
+.biomesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-cards);
+  margin-top: 32px;
+}
+
+.biomeCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: flex-end;
+  background: var(--bg-card);
+  transition: border-color 0.2s;
+}
+
+.biomeCard {
+  cursor: default;
+}
+
+.biomeCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+}
+
+.biomeCardContent {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.biomeCardName {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.biomeCardStat {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== MAPA ===== */
+
+.mapSection {
+  padding-top: var(--gap-sections);
+}
+
+.mapCard {
+  margin-top: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.mapPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.mapContent {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.mapPlaceholder {
+  aspect-ratio: 4/3;
+  background: var(--bg-deep);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mapEmoji {
+  font-size: 48px;
+}
+
+.mapStats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapStatItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-deep);
+  border-radius: 0 8px 8px 0;
+}
+
+.mapStatValue {
+  font-family: var(--font-title);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.mapStatLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ===== FUNCIONALIDADES ===== */
+
+.featuresSection {
+  padding-top: var(--gap-sections);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-cards);
+  margin-top: 32px;
+}
+
+.featureCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--padding-card);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: rgba(82, 183, 136, 0.1);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.featureTitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.featureDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* ===== SOBRE ===== */
+
+.aboutSection {
+  padding-top: var(--gap-sections);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.aboutTitle {
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 12px;
+}
+
+.aboutText {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 12px;
+  max-width: 480px;
+}
+
+.aboutImage {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.aboutImagePlaceholder {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4/3;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+  .heroCard {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .biomesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mapContent {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .statValue {
+    font-size: 28px;
+  }
+
+  .biomesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}

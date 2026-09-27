@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+/* ========================
+   CANOPI — Design System
+   ======================== */
+
+:root {
+  /* Cores base (não mudam entre biomas) */
+  --bg-deep: #0f1a0f;
+  --bg-main: #152415;
+  --bg-card: #1c2e1c;
+  --bg-card-hover: #243624;
+  --border: #2a3c2a;
+  --border-light: #344834;
+  --text-bright: #f0f0e6;
+  --text-main: #d4d8cc;
+  --text-muted: #8a9a82;
+  --text-dim: #5a6a52;
+
+  /* Cor de destaque — padrão Amazônia, sobrescrita por bioma */
+  --accent: #52B788;
+
+  /* Tipografia */
+  --font-title: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Espaçamentos */
+  --radius: 12px;
+  --padding-card: 24px;
+  --gap-cards: 16px;
+  --gap-sections: 64px;
+  --padding-page: 80px;
+}
+
+/* Cores de destaque por bioma */
+[data-biome="amazonia"] { --accent: #52B788; }
+[data-biome="cerrado"] { --accent: #D4A373; }
+[data-biome="mata-atlantica"] { --accent: #4ECDC4; }
+[data-biome="caatinga"] { --accent: #E07B54; }
+[data-biome="pampa"] { --accent: #A7C957; }
+[data-biome="pantanal"] { --accent: #7EB8D0; }
+
+/* ========================
+   Reset & Base
+   ======================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: var(--text-bright);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ========================
+   Utilitários
+   ======================== */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--padding-page);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding-page: 20px;
+    --gap-sections: 40px;
+  }
+}
+
+/* ========================
+   Tipografia — Classes
+   ======================== */
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+}
+
+.title-hero {
+  font-family: var(--font-title);
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.title-section {
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.title-card {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text-body {
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.text-muted {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.text-dim {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.text-scientific {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.data-inline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* ========================
+   Componentes base
+   ======================== */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--padding-card);
+  transition: background-color 0.2s ease;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.pill.active {
+  background: var(--accent);
+  color: var(--bg-deep);
+  border-color: var(--accent);
+}
+
+.pill:hover:not(.active) {
+  border-color: var(--border-light);
+  color: var(--text-main);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: var(--bg-deep);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--text-bright);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--border-light);
+}
