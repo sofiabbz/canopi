@@ -43,7 +43,7 @@
   transition: filter 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* scanline */
+/* scanline de revelacao */
 .scanline {
   position: absolute;
   inset: 0;
@@ -109,7 +109,7 @@
   transform: translateY(0);
 }
 
-/* hover glow */
+/* brilho no hover */
 .card:hover .imageArea {
   background: radial-gradient(
     circle at center,

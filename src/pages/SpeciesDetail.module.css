@@ -100,7 +100,7 @@
   font-size: 80px;
 }
 
-/* status */
+/* status de conservacao */
 
 .statusSection {
   margin-top: 48px;
@@ -154,7 +154,7 @@
   letter-spacing: 0.02em;
 }
 
-/* info */
+/* informacoes */
 
 .infoSection {
   margin-top: 48px;
@@ -191,7 +191,7 @@
   line-height: 1.5;
 }
 
-/* sobre */
+/* sobre a especie */
 
 .aboutSection {
   margin-top: 56px;
@@ -216,7 +216,7 @@
   margin-right: auto;
 }
 
-/* importancia */
+/* importancia ecologica */
 
 .importanceCard {
   display: grid;
@@ -324,7 +324,7 @@
   margin-top: 8px;
 }
 
-/* relacionadas */
+/* especies relacionadas */
 
 .relatedSection {
   margin-top: 56px;
@@ -432,7 +432,7 @@
   margin-top: 2px;
 }
 
-/* nav */
+/* navegacao */
 
 .backSection {
   margin-top: 48px;
