@@ -72,7 +72,7 @@ export default function Fauna() {
               key={sp.id}
               to={`/${biome.slug}/fauna/${sp.id}`}
               emoji={sp.emoji}
-              image={sp.image}
+              image={sp.image ?? undefined}
               category={sp.category}
               name={sp.name}
               scientific={sp.scientific}

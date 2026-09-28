@@ -72,7 +72,7 @@ export default function Flora() {
               key={sp.id}
               to={`/${biome.slug}/flora/${sp.id}`}
               emoji={sp.emoji}
-              image={sp.image}
+              image={sp.image ?? undefined}
               category={sp.category}
               name={sp.name}
               scientific={sp.scientific}
