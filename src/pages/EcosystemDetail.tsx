@@ -133,7 +133,13 @@ export default function EcosystemDetail() {
                   to={`/${biome.slug}/ecossistemas/${eco.id}`}
                   className={styles.relatedCard}
                 >
-                  <div className={styles.relatedEmoji}>{eco.emoji}</div>
+                  <div className={styles.relatedImageArea}>
+                    {eco.image ? (
+                      <img src={eco.image} alt={eco.name} className={styles.relatedPhoto} />
+                    ) : (
+                      <span className={styles.relatedEmoji}>{eco.emoji}</span>
+                    )}
+                  </div>
                   <div className={styles.relatedInfo}>
                     <span className={styles.relatedCategory}>{eco.category}</span>
                     <h4 className={styles.relatedName}>{eco.name}</h4>

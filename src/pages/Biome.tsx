@@ -18,6 +18,12 @@ export default function Biome() {
     );
   }
 
+  const coverImages: Record<string, string> = {
+    fauna: `/images/${biome.slug}/biome/fauna-cover.jpg`,
+    flora: `/images/${biome.slug}/biome/flora-cover.jpg`,
+    ecosystems: `/images/${biome.slug}/biome/ecossistemas-cover.jpg`,
+  };
+
   const sections = [
     { key: 'fauna', label: 'Fauna', route: 'fauna', data: biome.fauna },
     { key: 'flora', label: 'Flora', route: 'flora', data: biome.flora },
@@ -41,7 +47,13 @@ export default function Biome() {
             <p className={styles.heroSubtitle}>{biome.subtitle}</p>
             <p className={styles.heroDesc}>{biome.description}</p>
           </div>
-          <div className={styles.heroImage}>🌿</div>
+          <div className={styles.heroImage}>
+            <img
+              src={`/images/${biome.slug}/biome/hero.png`}
+              alt={biome.name}
+              className={styles.heroPhoto}
+            />
+          </div>
         </div>
 
         <div className={styles.statsGrid}>
@@ -63,6 +75,7 @@ export default function Biome() {
                 key={section.key}
                 to={`/${biome.slug}/${section.route}`}
                 className={styles.bioCard}
+                style={{ backgroundImage: `url(${coverImages[section.key]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               >
                 <div className={styles.bioCardOverlay} />
                 <div className={styles.bioCardContent}>

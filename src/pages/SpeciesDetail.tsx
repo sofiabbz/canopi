@@ -188,7 +188,13 @@ export default function SpeciesDetail() {
                   to={`/${biome.slug}/${sectionRoute}/${sp.id}`}
                   className={styles.relatedCard}
                 >
-                  <div className={styles.relatedEmoji}>{sp.emoji}</div>
+                  <div className={styles.relatedImageArea}>
+                    {sp.image ? (
+                      <img src={sp.image} alt={sp.name} className={styles.relatedPhoto} />
+                    ) : (
+                      <span className={styles.relatedEmoji}>{sp.emoji}</span>
+                    )}
+                  </div>
                   <div className={styles.relatedInfo}>
                     <span className={styles.relatedCategory}>{sp.category}</span>
                     <h4 className={styles.relatedName}>{sp.name}</h4>
