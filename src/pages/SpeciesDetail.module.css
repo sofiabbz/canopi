@@ -100,7 +100,7 @@
   font-size: 80px;
 }
 
-/* status de conserva��o */
+/* status */
 
 .statusSection {
   margin-top: 48px;
@@ -154,7 +154,7 @@
   letter-spacing: 0.02em;
 }
 
-/* informa��es */
+/* info */
 
 .infoSection {
   margin-top: 48px;
@@ -191,7 +191,7 @@
   line-height: 1.5;
 }
 
-/* sobre a esp�cie */
+/* sobre */
 
 .aboutSection {
   margin-top: 56px;
@@ -216,7 +216,7 @@
   margin-right: auto;
 }
 
-/* import�ncia ecol�gica */
+/* importancia */
 
 .importanceCard {
   display: grid;
@@ -324,7 +324,7 @@
   margin-top: 8px;
 }
 
-/* esp�cies relacionadas */
+/* relacionadas */
 
 .relatedSection {
   margin-top: 56px;
@@ -432,7 +432,7 @@
   margin-top: 2px;
 }
 
-/* navega��o */
+/* nav */
 
 .backSection {
   margin-top: 48px;

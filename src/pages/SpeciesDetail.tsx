@@ -90,7 +90,7 @@ export default function SpeciesDetail() {
           </div>
         </div>
 
-        {/* status de conserva��o */}
+        {/* status */}
         <Section className={styles.statusSection}>
           <p className={`eyebrow ${styles.centered}`}>STATUS DE CONSERVAÇÃO</p>
           <div className={styles.statusBar}>
@@ -117,7 +117,7 @@ export default function SpeciesDetail() {
           </p>
         </Section>
 
-        {/* informa��es */}
+        {/* info */}
         <Section className={styles.infoSection}>
           <p className={`eyebrow ${styles.centered}`}>
             INFORMAÇÕES DA ESPÉCIE
@@ -139,7 +139,7 @@ export default function SpeciesDetail() {
           <p className={styles.aboutText}>{species.description}</p>
         </Section>
 
-        {/* import�ncia ecol�gica */}
+        {/* importancia */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
@@ -157,7 +157,7 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* voc� sabia? */}
+        {/* curiosidades */}
         <Section className={styles.funFactsSection}>
           <p className={`eyebrow ${styles.centered}`}>VOCÊ SABIA?</p>
           <h2 className={styles.funFactsTitle}>Curiosidades sobre a espécie</h2>
@@ -174,7 +174,7 @@ export default function SpeciesDetail() {
           </div>
         </Section>
 
-        {/* esp�cies relacionadas */}
+        {/* relacionadas */}
         {related.length > 0 && (
           <Section className={styles.relatedSection}>
             <p className={`eyebrow ${styles.centered}`}>CONTINUE EXPLORANDO</p>
@@ -206,7 +206,7 @@ export default function SpeciesDetail() {
           </Section>
         )}
 
-        {/* navega��o */}
+        {/* nav */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/${sectionRoute}`} className="btn-outline">
             ← Voltar para {sectionLabel}

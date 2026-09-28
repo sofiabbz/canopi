@@ -66,7 +66,7 @@ export default function EcosystemDetail() {
           </div>
         </div>
 
-        {/* informa��es */}
+        {/* info */}
         <Section className={styles.infoSection}>
           <p className="eyebrow" style={{ textAlign: 'center' }}>INFORMAÇÕES DO ECOSSISTEMA</p>
           <div className={styles.infoGrid}>
@@ -86,7 +86,7 @@ export default function EcosystemDetail() {
           <p className={styles.aboutText}>{ecosystem.about}</p>
         </Section>
 
-        {/* import�ncia ecol�gica */}
+        {/* importancia */}
         <Section>
           <div className={styles.importanceCard}>
             <div className={styles.importanceImage}>
@@ -104,7 +104,7 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* voc� sabia? */}
+        {/* curiosidades */}
         <Section className={styles.factsSection}>
           <p className="eyebrow">VOCÊ SABIA?</p>
           <h2 className={styles.factsTitle}>Curiosidades sobre o ecossistema</h2>
@@ -119,7 +119,7 @@ export default function EcosystemDetail() {
           </div>
         </Section>
 
-        {/* ecossistemas relacionados */}
+        {/* relacionados */}
         {related.length > 0 && (
           <Section className={styles.relatedSection}>
             <p className="eyebrow" style={{ textAlign: 'center' }}>CONTINUE EXPLORANDO</p>
@@ -150,7 +150,7 @@ export default function EcosystemDetail() {
           </Section>
         )}
 
-        {/* navega��o */}
+        {/* nav */}
         <div className={styles.backSection}>
           <Link to={`/${biome.slug}/ecossistemas`} className="btn-outline">
             ← Voltar para Ecossistemas

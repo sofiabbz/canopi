@@ -3,7 +3,7 @@
 /* Design System */
 
 :root {
-  /* Cores base (não mudam entre biomas) */
+  /* cores */
   --bg-deep: #0f1a0f;
   --bg-main: #152415;
   --bg-card: #1c2e1c;
@@ -15,14 +15,14 @@
   --text-muted: #8a9a82;
   --text-dim: #5a6a52;
 
-  /* Cor de destaque — padrão Amazônia, sobrescrita por bioma */
+  /* accent */
   --accent: #52B788;
 
-  /* Tipografia */
+  /* fontes */
   --font-title: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Espaçamentos */
+  /* spacing */
   --radius: 12px;
   --padding-card: 24px;
   --gap-cards: 16px;
@@ -30,7 +30,7 @@
   --padding-page: 80px;
 }
 
-/* Cores de destaque por bioma */
+/* biomas */
 [data-biome="amazonia"] { --accent: #52B788; }
 [data-biome="cerrado"] { --accent: #D4A373; }
 [data-biome="mata-atlantica"] { --accent: #4ECDC4; }

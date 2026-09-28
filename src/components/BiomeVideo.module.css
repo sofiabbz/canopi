@@ -20,7 +20,7 @@
   transition: opacity 1.5s ease;
 }
 
-/* Gradient: escurece progressivamente */
+/* gradient */
 .overlayGradient {
   position: absolute;
   inset: 0;
@@ -33,7 +33,7 @@
   );
 }
 
-/* Tint com a cor do bioma */
+/* tint */
 .overlayColor {
   position: absolute;
   inset: 0;
@@ -41,7 +41,7 @@
   mix-blend-mode: color;
 }
 
-/* Camada escura base para garantir leitura */
+/* dark overlay */
 .overlayDark {
   position: absolute;
   inset: 0;
@@ -65,7 +65,7 @@
   }
 }
 
-/* Desativa vídeo se o usuário prefere menos movimento */
+/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .video {
     display: none;
