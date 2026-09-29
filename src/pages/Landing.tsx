@@ -74,7 +74,7 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.heroImage}>
-              <img src="/images/landing/hero.png" alt="Flora brasileira" className={styles.heroPhoto} />
+              <img src="/images/landing/img-hero.png" alt="Flora brasileira" className={styles.heroPhoto} />
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function Landing() {
                   style={{ '--biome-color': biome.color } as React.CSSProperties}
                 >
                   <img
-                    src={`/images/landing/${biome.slug}.png`}
+                    src={`/images/landing/${biome.slug}-card.png`}
                     alt={biome.name}
                     className={styles.biomeCardImg}
                   />
