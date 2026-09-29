@@ -20,8 +20,8 @@ export default function About() {
             Feito com propósito
           </h1>
           <p className={styles.heroDesc}>
-            O Canopi é um Atlas Interativo da Biodiversidade Brasileira — um projeto
-            independente que combina tecnologia e ciência para tornar a riqueza natural
+            O Canopi é um Atlas Interativo da Biodiversidade Brasileira, é um projeto
+            independente que combina tecnologia e ciência para tornar a biodiversidade
             do Brasil acessível, visual e educativa.
           </p>
         </div>
@@ -31,11 +31,10 @@ export default function About() {
             <p className="eyebrow">MISSÃO</p>
             <h2 className={styles.cardTitle}>Por que esse projeto existe?</h2>
             <p className={styles.cardText}>
-              O Brasil é o país com a maior biodiversidade do planeta, mas grande parte
-              desse conhecimento está disperso em artigos científicos e bases de dados
-              inacessíveis ao público geral. O Canopi nasceu para mudar isso — reunindo
+              O Brasil é o país com a maior biodiversidade do planeta, mas a maior parte desse conhecimento é de difícil acesso, 
+              pois se encontra em artigos científicos e bases de dados que são inacessíveis ao público geral. O Canopi foi criado para mudar isso, reunindo
               informações sobre fauna, flora e ecossistemas dos 6 biomas brasileiros em
-              uma experiência interativa e visualmente rica.
+              uma experiência interativa e visualmente atrativa.
             </p>
           </div>
 
@@ -43,7 +42,7 @@ export default function About() {
             <p className="eyebrow">AUTORA</p>
             <h2 className={styles.cardTitle}>Quem está por trás?</h2>
             <p className={styles.cardText}>
-              Desenvolvido por Sofia — estudante de Análise e Desenvolvimento de Sistemas
+              Desenvolvido por Sofia, estudante de Análise e Desenvolvimento de Sistemas
               em Brasília. Este projeto foi criado como uma forma de unir tecnologia,
               design e ciência em algo que realmente faça a diferença na forma como as
               pessoas enxergam a biodiversidade brasileira.
