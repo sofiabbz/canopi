@@ -75,7 +75,7 @@ export default function Biome() {
                 key={section.key}
                 to={`/${biome.slug}/${section.route}`}
                 className={styles.bioCard}
-                style={{ backgroundImage: `url(${coverImages[section.key]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                style={{ backgroundImage: `url(${coverImages[section.key]})`, backgroundSize: 'cover', backgroundPosition: 'center 30%' }}
               >
                 <div className={styles.bioCardOverlay} />
                 <div className={styles.bioCardContent}>
