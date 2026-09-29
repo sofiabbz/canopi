@@ -49,7 +49,7 @@ export default function Biome() {
           </div>
           <div className={styles.heroImage}>
             <img
-              src={`/images/${biome.slug}/biome/hero.png`}
+              src={`/images/${biome.slug}/biome/hero.jpg`}
               alt={biome.name}
               className={styles.heroPhoto}
             />
