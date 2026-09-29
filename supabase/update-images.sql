@@ -2,25 +2,25 @@
 UPDATE species SET
   image = '/images/amazonia/fauna/onca-card.png',
   hero_image = '/images/amazonia/fauna/onca-hero.png',
-  detail_image = '/images/amazonia/fauna/onca-hero.png'
+  detail_image = '/images/amazonia/fauna/onca-detail.jpg'
 WHERE id = 'onca-pintada';
 
 UPDATE species SET
   image = '/images/amazonia/fauna/boto-card.jpg',
   hero_image = '/images/amazonia/fauna/boto-hero.jpg',
-  detail_image = '/images/amazonia/fauna/boto-hero.jpg'
+  detail_image = '/images/amazonia/fauna/boto-detail.jpg'
 WHERE id = 'boto-cor-de-rosa';
 
 UPDATE species SET
   image = '/images/amazonia/fauna/preguica-card.jpg',
   hero_image = '/images/amazonia/fauna/preguica-hero.jpg',
-  detail_image = '/images/amazonia/fauna/preguica-hero.jpg'
+  detail_image = '/images/amazonia/fauna/preguica-detail.jpg'
 WHERE id = 'preguica-real';
 
 UPDATE species SET
   image = '/images/amazonia/fauna/harpia-card.jpg',
   hero_image = '/images/amazonia/fauna/harpia-hero.jpg',
-  detail_image = '/images/amazonia/fauna/harpia-hero.jpg'
+  detail_image = '/images/amazonia/fauna/harpia-detail.jpg'
 WHERE id = 'harpia';
 
 -- amazonia flora
