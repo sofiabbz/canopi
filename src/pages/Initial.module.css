@@ -11,7 +11,7 @@
 .background {
   position: absolute;
   inset: 0;
-  background-image: url('/images/amazonia/biome/hero.jpg');
+  background-image: url('src/assets/images/initial-background.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.4) saturate(1.2);
