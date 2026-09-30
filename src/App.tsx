@@ -1,7 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Initial from './pages/Initial';
 import Landing from './pages/Landing';
 import Atlas from './pages/Atlas';
 import About from './pages/About';
@@ -14,13 +15,17 @@ import EcosystemDetail from './pages/EcosystemDetail';
 import NotFound from './pages/NotFound';
 
 function App() {
+  const { pathname } = useLocation();
+  const isInitial = pathname === '/';
+
   return (
     <>
       <ScrollToTop />
-      <Navbar />
+      {!isInitial && <Navbar />}
       <main>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Initial />} />
+          <Route path="/home" element={<Landing />} />
           <Route path="/atlas" element={<Atlas />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/:biome" element={<Biome />} />
@@ -33,7 +38,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      {!isInitial && <Footer />}
     </>
   );
 }
