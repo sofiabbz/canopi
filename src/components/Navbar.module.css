@@ -5,6 +5,7 @@
   background: var(--bg-main);
   border-bottom: 1px solid var(--border);
   height: 64px;
+  padding: 10px;
 }
 
 .inner {
