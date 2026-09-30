@@ -21,9 +21,8 @@
 }
 
 .logoImg {
-  height: auto;
-  width: 400px;
-  max-width: 40vw;
+  height: 40px;
+  width: auto;
 }
 
 .logoText {
