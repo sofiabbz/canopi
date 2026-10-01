@@ -12,6 +12,7 @@ import Flora from './pages/Flora';
 import Ecosystems from './pages/Ecosystems';
 import SpeciesDetail from './pages/SpeciesDetail';
 import EcosystemDetail from './pages/EcosystemDetail';
+import Sources from './pages/Sources';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/home" element={<Landing />} />
           <Route path="/atlas" element={<Atlas />} />
           <Route path="/sobre" element={<About />} />
+          <Route path="/fontes" element={<Sources />} />
           <Route path="/:biome" element={<Biome />} />
           <Route path="/:biome/fauna" element={<Fauna />} />
           <Route path="/:biome/fauna/:id" element={<SpeciesDetail />} />
