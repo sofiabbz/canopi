@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { useBiomes } from '../hooks/useBiomes';
 import useScrollReveal from '../hooks/useScrollReveal';
 import styles from './Landing.module.css';
+import IconSearch from '../assets/icons/search.svg';
+import IconShield from '../assets/icons/shield.svg';
+import IconCamera from '../assets/icons/camera.svg';
 
 function Reveal({ children, className }: { children: React.ReactNode; className?: string }) {
   const { ref, visible } = useScrollReveal(0.12);
@@ -31,17 +34,17 @@ const mapStats = [
 
 const features = [
   {
-    icon: '🔍',
+    icon: IconSearch,
     title: 'Filtros avançados',
     description: 'Por ameaça de extinção, uso medicinal, alimentício e época de floração.',
   },
   {
-    icon: '🛡️',
+    icon: IconShield,
     title: 'Status IUCN',
     description: 'Dados reais de conservação com classificação oficial da lista vermelha.',
   },
   {
-    icon: '📷',
+    icon: IconCamera,
     title: 'Fotos autorais',
     description: 'Galeria com fotografias originais das espécies catalogadas.',
   },
@@ -193,7 +196,7 @@ export default function Landing() {
             <div className={styles.featuresGrid}>
               {features.map((feat, i) => (
                 <div key={i} className={styles.featureCard}>
-                  <span className={styles.featureIcon}>{feat.icon}</span>
+                  <span className={styles.featureIcon}> <img src={feat.icon} alt="" width={20} height={20} /></span>
                   <h3 className={styles.featureTitle}>{feat.title}</h3>
                   <p className={styles.featureDesc}>{feat.description}</p>
                 </div>
@@ -207,20 +210,15 @@ export default function Landing() {
       <Reveal>
         <section className={styles.aboutSection}>
           <div className="container">
-            <div className={styles.aboutGrid}>
-              <div className={styles.aboutContent}>
-                <p className="eyebrow">SOBRE O PROJETO</p>
-                <h2 className={styles.aboutTitle}>Feito com propósito</h2>
-                <p className={styles.aboutText}>
-                  O Atlas Interativo da Flora Brasileira é um projeto independente que
-                  combina tecnologia e ciência para tornar a biodiversidade brasileira
-                  acessível e visual. Desenvolvido por Sofia — estudante de Análise e
-                  Desenvolvimento de Sistemas em Brasília.
-                </p>
-              </div>
-              <div className={styles.aboutImage}>
-                <div className={styles.aboutImagePlaceholder} />
-              </div>
+            <div className={styles.aboutCenter}>
+              <p className="eyebrow">SOBRE O PROJETO</p>
+              <h2 className={styles.aboutTitle}>Feito com propósito</h2>
+              <p className={styles.aboutText}>
+                O Atlas Interativo da Flora Brasileira é um projeto independente que
+                combina tecnologia e ciência para tornar a biodiversidade brasileira
+                acessível e visual. Desenvolvido por Sofia — estudante de Análise e
+                Desenvolvimento de Sistemas em Brasília.
+              </p>
             </div>
           </div>
         </section>
