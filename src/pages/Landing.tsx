@@ -45,7 +45,7 @@ const features = [
   },
   {
     icon: IconCamera,
-    title: 'Fotos autorais',
+    title: 'Fotos reais',
     description: 'Galeria com fotografias originais das espécies catalogadas.',
   },
 ];
