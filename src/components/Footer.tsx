@@ -8,7 +8,7 @@ export default function Footer() {
           © 2024 Atlas da Flora Brasileira — Dados: Flora e Funga do Brasil, IUCN Red List, CNCFlora
         </p>
         <div className={styles.links}>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/sofiabbz/canopi.git" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="http://www.linkedin.com/in/sofia-bezerra-belem" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="#">Fontes</a>
         </div>
