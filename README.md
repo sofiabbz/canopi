@@ -12,7 +12,7 @@ Atlas interativo da biodiversidade brasileira. O projeto apresenta os 6 biomas d
 
 ## Sobre
 
-Projeto desenvolvido como estudo prático de desenvolvimento web fullstack. A ideia surgiu da vontade de tornar a biodiversidade brasileira mais acessível e visual — transformar dados científicos em algo que qualquer pessoa consiga explorar.
+Projeto desenvolvido como estudo prático de desenvolvimento web fullstack. A ideia surgiu da vontade de tornar a biodiversidade brasileira mais acessível e visual, para assim transformar dados científicos em algo que qualquer pessoa consiga explorar.
 
 O site funciona como uma SPA onde o usuário navega pelos biomas através de um mapa SVG interativo, filtra espécies por categoria, pesquisa por nome popular ou científico, e visualiza informações detalhadas de cada espécie com status de conservação.
 
